@@ -1,0 +1,210 @@
+[
+  {
+    "file": "2.3 CER notes.docx",
+    "sha256": "af0abd1f0d8ab39798bf0239a6ef3a2fe1753429931340c54dd7201647926151",
+    "pages_or_slides": 0,
+    "media_files": 3,
+    "text_file": "units/ecology/source-text/2.3 CER notes.docx.md",
+    "characters": 1619
+  },
+  {
+    "file": "A_EcologyPracticeQuiz_BLANK.pdf",
+    "sha256": "c8de20251489f4c9134f54471dfba9cb83a40cfd3fd69029a78c071ee8a97ae7",
+    "pages_or_slides": 4,
+    "media_files": 0,
+    "text_file": "units/ecology/source-text/A_EcologyPracticeQuiz_BLANK.pdf.md",
+    "characters": 6929
+  },
+  {
+    "file": "A_EcologyPracticeQuiz_KEY.pdf",
+    "sha256": "89531768be3b96538684984ad8f814695e3829f5f6b7fb78b9989348cbd85590",
+    "pages_or_slides": 4,
+    "media_files": 0,
+    "text_file": "units/ecology/source-text/A_EcologyPracticeQuiz_KEY.pdf.md",
+    "characters": 7544
+  },
+  {
+    "file": "Biodiversity Worksheet (handout version).docx",
+    "sha256": "e156b50bbeeded6fed2f62684b2839a7419788197cfc57b2cd401bb59a299981",
+    "pages_or_slides": 0,
+    "media_files": 0,
+    "text_file": "units/ecology/source-text/Biodiversity Worksheet (handout version).docx.md",
+    "characters": 2008
+  },
+  {
+    "file": "Biodiversity and It's Threats Debrief.pptx",
+    "sha256": "814348c32dcd05915cc9e65da7a5695f41e766c1dd4b999f84989fbc35b4b8ea",
+    "pages_or_slides": 8,
+    "media_files": 2,
+    "text_file": "units/ecology/source-text/Biodiversity and It's Threats Debrief.pptx.md",
+    "characters": 4247
+  },
+  {
+    "file": "Biology Class Basics (KJ_PH).pptx",
+    "sha256": "886c7d542f18d48a3d4753490f059efcab7a3ab667319ff919ca75d950d9afc5",
+    "pages_or_slides": 8,
+    "media_files": 4,
+    "text_file": "units/ecology/source-text/Biology Class Basics (KJ_PH).pptx.md",
+    "characters": 2748
+  },
+  {
+    "file": "CER.pptx",
+    "sha256": "36e22ad2066f36e3c5cdb2c594f2175ad75c47f16f9e88adf8c07731ad07a205",
+    "pages_or_slides": 18,
+    "media_files": 6,
+    "text_file": "units/ecology/source-text/CER.pptx.md",
+    "characters": 4652
+  },
+  {
+    "file": "Deductive vs Inductive Reasoning Overview.pptx",
+    "sha256": "6dfd5d20d7db4c4d50a8a6c64c1d5d5f767cb4929e21f86ea360afb13d4a6ad9",
+    "pages_or_slides": 6,
+    "media_files": 1,
+    "text_file": "units/ecology/source-text/Deductive vs Inductive Reasoning Overview.pptx.md",
+    "characters": 2315
+  },
+  {
+    "file": "Eco_2_study_guide_framework (1).pdf",
+    "sha256": "1f2521607abfd56d5ba1a132804dc706e44eb670c26906aad0333eeeba29d902",
+    "pages_or_slides": 2,
+    "media_files": 0,
+    "text_file": "units/ecology/source-text/Eco_2_study_guide_framework (1).pdf.md",
+    "characters": 908
+  },
+  {
+    "file": "Eco_2_study_guide_framework.pdf",
+    "sha256": "1f2521607abfd56d5ba1a132804dc706e44eb670c26906aad0333eeeba29d902",
+    "pages_or_slides": 2,
+    "media_files": 0,
+    "text_file": "units/ecology/source-text/Eco_2_study_guide_framework.pdf.md",
+    "characters": 908
+  },
+  {
+    "file": "Ecology Unit Guide (KJ).docx",
+    "sha256": "e6b3f3537992ee1f8a8f84aca090043dadd3e0cd5fcac364866f2cf731772344",
+    "pages_or_slides": 0,
+    "media_files": 0,
+    "text_file": "units/ecology/source-text/Ecology Unit Guide (KJ).docx.md",
+    "characters": 10732
+  },
+  {
+    "file": "Energy Flow Lab 2021.docx",
+    "sha256": "4683cf0479da92cf9d72a2d5f658fc28d7c8b37031ecc017967c95b846a19d47",
+    "pages_or_slides": 0,
+    "media_files": 0,
+    "text_file": "units/ecology/source-text/Energy Flow Lab 2021.docx.md",
+    "characters": 3552
+  },
+  {
+    "file": "Energy and Matter LG questions (KJ).docx",
+    "sha256": "0772719904a8a5449709d17026c974537787c738652aca304741f66ef81f3eba",
+    "pages_or_slides": 0,
+    "media_files": 0,
+    "text_file": "units/ecology/source-text/Energy and Matter LG questions (KJ).docx.md",
+    "characters": 1054
+  },
+  {
+    "file": "Energy and Matter Language Guide.docx",
+    "sha256": "31fdb1c68f6dd19e23379c93e31d9a3fa614c9b877cbfafa82d014ffb98adc24",
+    "pages_or_slides": 0,
+    "media_files": 0,
+    "text_file": "units/ecology/source-text/Energy and Matter Language Guide.docx.md",
+    "characters": 3385
+  },
+  {
+    "file": "Energy and Matter Practice Questions.pptx",
+    "sha256": "7692dd6086f30f432e349bd2d1581c318a20c4e6ddc883fe85dcb9a56682e8a6",
+    "pages_or_slides": 15,
+    "media_files": 0,
+    "text_file": "units/ecology/source-text/Energy and Matter Practice Questions.pptx.md",
+    "characters": 3456
+  },
+  {
+    "file": "Energy, Ecosystems, and Ecology Part 1 (KJ).2024.docx",
+    "sha256": "96e7bea8a39fa24c0f3669c835add0b52092edfe3182fde3001fe36d4614759c",
+    "pages_or_slides": 0,
+    "media_files": 0,
+    "text_file": "units/ecology/source-text/Energy, Ecosystems, and Ecology Part 1 (KJ).2024.docx.md",
+    "characters": 4909
+  },
+  {
+    "file": "Feedback Mechanisms and Homeostasis.pptx",
+    "sha256": "b4f3fc11cc0341c04e54d53376897b58a48375121a89d464a631f96c71957f48",
+    "pages_or_slides": 10,
+    "media_files": 8,
+    "text_file": "units/ecology/source-text/Feedback Mechanisms and Homeostasis.pptx.md",
+    "characters": 3124
+  },
+  {
+    "file": "Feedback Mechanisms and Homestasis Practice.docx",
+    "sha256": "3adc6684cc0f204a90c57c79bc1fd7d505ff94b74ffccd6c2ba2f135a6ff920c",
+    "pages_or_slides": 0,
+    "media_files": 1,
+    "text_file": "units/ecology/source-text/Feedback Mechanisms and Homestasis Practice.docx.md",
+    "characters": 1325
+  },
+  {
+    "file": "Geotastic Inference Game.docx",
+    "sha256": "6b34e8e9618a2553cc0f38bef594d2aae70ff2947bec597a2e077e3bbc3ec69e",
+    "pages_or_slides": 0,
+    "media_files": 0,
+    "text_file": "units/ecology/source-text/Geotastic Inference Game.docx.md",
+    "characters": 3038
+  },
+  {
+    "file": "Lecture 1_ WHAT IS LIFE SKELETON NOTES.docx",
+    "sha256": "285ddcdfcb2b6669bd143eb4849d63e95c97957300810b9c4c9de8428d694e72",
+    "pages_or_slides": 0,
+    "media_files": 1,
+    "text_file": "units/ecology/source-text/Lecture 1_ WHAT IS LIFE SKELETON NOTES.docx.md",
+    "characters": 1581
+  },
+  {
+    "file": "Lecture 5 Threats to Biodiversity Notes.docx",
+    "sha256": "fe8091668eb7c275e9c128c794f0208e08b51bf2e0aa85af859ddfb44f5b6e45",
+    "pages_or_slides": 0,
+    "media_files": 5,
+    "text_file": "units/ecology/source-text/Lecture 5 Threats to Biodiversity Notes.docx.md",
+    "characters": 1317
+  },
+  {
+    "file": "Metabolism, Trophic Levels and Energy Transfer (KJ_PH).pptx",
+    "sha256": "1a14939947473d491cd26ecadd488fc39307df3a3f3d2f3d1a43db82d0250de4",
+    "pages_or_slides": 27,
+    "media_files": 28,
+    "text_file": "units/ecology/source-text/Metabolism, Trophic Levels and Energy Transfer (KJ_PH).pptx.md",
+    "characters": 5246
+  },
+  {
+    "file": "Observation and Inference.docx",
+    "sha256": "ce092626705baaf72286d6fd7eb1e20a182f0ad6522cd5abf62d1546b211f062",
+    "pages_or_slides": 0,
+    "media_files": 8,
+    "text_file": "units/ecology/source-text/Observation and Inference.docx.md",
+    "characters": 4471
+  },
+  {
+    "file": "Population Ecology KJ.pptx",
+    "sha256": "70bf62135f8fc5c6452d3e1fa542aa96dc9d3cf56117bd9167c6c7c6956ca34b",
+    "pages_or_slides": 19,
+    "media_files": 6,
+    "text_file": "units/ecology/source-text/Population Ecology KJ.pptx.md",
+    "characters": 5013
+  },
+  {
+    "file": "Population Ecology Skeleton Notes.docx",
+    "sha256": "48c3c5fbf988ee10ccc2e7b3a33c4c92c802bf04d48baa464a30f10ecc09deb0",
+    "pages_or_slides": 0,
+    "media_files": 2,
+    "text_file": "units/ecology/source-text/Population Ecology Skeleton Notes.docx.md",
+    "characters": 2403
+  },
+  {
+    "file": "Trophic Levels  & Energy Transfer Skeleton Notes (KJ_PH).docx",
+    "sha256": "94be8d6328e397f2eccb05c121c1e505d449d4f334008dec6f724e6ebc25ffce",
+    "pages_or_slides": 0,
+    "media_files": 0,
+    "text_file": "units/ecology/source-text/Trophic Levels  & Energy Transfer Skeleton Notes (KJ_PH).docx.md",
+    "characters": 1257
+  }
+]
