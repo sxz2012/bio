@@ -44,6 +44,7 @@ Create unit and exam folders as actual materials arrive; the course syllabus sho
 - [Ecology materials index](units/ecology/materials-index.md): all 26 supplied source files, mapped to learning targets. The study book now has 66 pages: illustrated diagrams, a vocabulary page and summary sheet per learning target, model answers to the teacher's study questions, a practice test, a CER template, and a study plan with self-check. A 90-card flashcard set (printable PDF and Anki/Quizlet import) is generated from the book.
 
 - Textbook: **California Miller & Levine Biology Student**, as identified by Shawn’s parent. Edition and textbook pages are pending.
+- Reference book (source of truth for all facts and explanations): **Campbell Biology** (Urry, Cain, Wasserman, Minorsky, Orr), kept locally at `book/Campbell Biology ... .pdf`. The `book/` folder is git-ignored and is not published to GitHub. Ground every study guide, answer, and practice explanation in the relevant Campbell chapter and cite chapter and page.
 - [Ecology study book source and build instructions](units/ecology/book/README.md): LaTeX explanations, knowledge graphs, and practice for 1A–2C.
 - Practice materials: [StudyBio blank quiz](A_EcologyPracticeQuiz_BLANK.pdf) and [answer key](A_EcologyPracticeQuiz_KEY.pdf). The book flags ambiguous or oversimplified key explanations.
 
