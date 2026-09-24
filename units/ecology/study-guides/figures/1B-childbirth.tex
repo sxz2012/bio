@@ -1,0 +1,17 @@
+% Positive feedback during childbirth (teacher's slide 5).
+\begin{guidefig}{Positive feedback in childbirth (teacher's slide 5): each step makes the next one stronger, until the baby is born and the loop stops.}
+\begin{tikzpicture}
+  \node[gbox=watchc,text width=3.1cm] (a) at (0,1.9) {Baby's head pushes on the cervix};
+  \node[gbox=watchc,text width=3.1cm] (b) at (4.4,0.6) {Nerve signals go to the brain};
+  \node[gbox=watchc,text width=3.1cm] (c) at (2.6,-1.6) {Pituitary releases \textbf{oxytocin}};
+  \node[gbox=watchc,text width=3.1cm] (d) at (-2.6,-1.6) {Oxytocin causes \textbf{stronger} contractions};
+  \node[gbox=watchc,text width=3.1cm] (e) at (-4.4,0.6) {Baby pushed harder against the cervix};
+  \draw[garr=watchc] (a.east) to[bend left=15] (b.north);
+  \draw[garr=watchc] (b.south) to[bend left=15] (c.east);
+  \draw[garr=watchc] (c.west) -- node[glab,below]{more and more} (d.east);
+  \draw[garr=watchc] (d.west) to[bend left=15] (e.south);
+  \draw[garr=watchc] (e.north) to[bend left=15] node[glab,above left]{\textbf{amplifies}} (a.west);
+  \node[gbox=tipc,text width=2.6cm] (f) at (0,-3.2) {Baby is born: the loop \textbf{ends}};
+  \draw[garr=tipc,dashed] (0,-1.6) -- (f.north);
+\end{tikzpicture}
+\end{guidefig}

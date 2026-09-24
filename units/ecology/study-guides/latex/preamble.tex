@@ -1,0 +1,165 @@
+% Shared preamble for the learning-target study guides (built by ../build.py).
+\usepackage[margin=0.8in,headheight=15pt]{geometry}
+\usepackage{fontspec}
+\setmainfont{texgyrepagella}[Extension=.otf,UprightFont=*-regular,BoldFont=*-bold,ItalicFont=*-italic,BoldItalicFont=*-bolditalic]
+\setsansfont{texgyreheros}[Extension=.otf,UprightFont=*-regular,BoldFont=*-bold,ItalicFont=*-italic,BoldItalicFont=*-bolditalic]
+\usepackage{amsmath,amssymb,booktabs,longtable,array,calc,enumitem,xcolor,graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}\pgfplotsset{compat=1.18}
+\usetikzlibrary{calc,arrows.meta,positioning}
+\usepackage[most]{tcolorbox}
+\usepackage{fancyhdr,titlesec,needspace}
+\usepackage{hyperref}
+
+\definecolor{forest}{HTML}{24594B}
+\definecolor{pale}{HTML}{EFF5F1}
+\definecolor{keyc}{HTML}{C98A0B}   % key idea: amber
+\definecolor{vocabc}{HTML}{2F6FA8} % vocabulary: blue
+\definecolor{tipc}{HTML}{3F8A3A}   % make it make sense: green
+\definecolor{watchc}{HTML}{B8452F} % watch out: red
+\definecolor{linkc}{HTML}{7B4C9A}  % connection: purple
+\hypersetup{colorlinks=true,linkcolor=forest,urlcolor=vocabc}
+
+\pagestyle{fancy}\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\small\sffamily\thepage}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\setlength{\emergencystretch}{2em}
+\setlist[itemize]{leftmargin=1.3em,itemsep=2pt,topsep=2pt}
+\setlist[enumerate]{leftmargin=1.6em,itemsep=2pt,topsep=2pt}
+\renewcommand{\arraystretch}{1.2}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\providecommand{\pandocbounded}[1]{#1}
+\def\LTcaptype{none}
+
+\titleformat{\section}{\Large\sffamily\bfseries\color{forest}}{}{0pt}{}[{\color{forest}\titlerule[0.8pt]}]
+\titleformat{\subsection}{\large\sffamily\bfseries\color{forest}}{}{0pt}{}
+\titleformat{\subsubsection}{\normalsize\sffamily\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{14pt}{8pt}
+\titlespacing*{\subsection}{0pt}{12pt}{4pt}
+\setcounter{secnumdepth}{0}
+
+% Block quotes (textbook excerpts) as shaded boxes.
+\renewenvironment{quote}{\begin{tcolorbox}[breakable,enhanced,colback=pale,colframe=forest,boxrule=0pt,leftrule=2.5pt,arc=0pt,
+  left=8pt,right=8pt,top=4pt,bottom=4pt,before skip=4pt,after skip=6pt]\small}{\end{tcolorbox}}
+
+% ------------------------------------------------------------------ annotated textbook pages
+% Landscape letter page: the scanned page on the left (full height), notes on the right.
+\newlength{\portraitW}\setlength{\portraitW}{8.5in}
+\newlength{\portraitH}\setlength{\portraitH}{11in}
+\def\pgmargin{21.6}  % pt, top/left margin around the scan
+\def\pgheight{568.8} % pt, printed height of the scan (8.5in - 2 margins)
+\newcommand{\setpagesize}[2]{%
+  \global\pdfpagewidth=#1\global\pdfpageheight=#2%
+  \global\paperwidth=#1\global\paperheight=#2}
+
+\newcommand{\circlednum}[2]{\tikz[baseline=(c.base)]\node[circle,fill=#1,text=white,font=\scriptsize\sffamily\bfseries,inner sep=1.2pt,minimum size=11pt](c){#2};}
+
+% \textbookpage{image}{page width pt}{page height pt}{lesson}{book page}{intro}{highlights}{notes}
+% Notes (\addnote) are typeset into boxes first, then laid out: each sits level with its highlight
+% when there is room, is pushed down to avoid the note above, and is pulled back up from the page bottom.
+\newcount\nnotes
+\newbox\hdrbox
+\newdimen\prevbottom \newdimen\limitdim \newdimen\tmpdim
+\def\notegap{7pt}
+\newcommand{\addnote}[5]{% color, number, label, anchor (scan pt, <0 = none), text
+  \global\advance\nnotes by 1
+  \expandafter\ifx\csname nb@\the\nnotes\endcsname\relax\expandafter\newbox\csname nb@\the\nnotes\endcsname\fi
+  \global\expandafter\setbox\csname nb@\the\nnotes\endcsname=\hbox{\tikz\node[notebox=#1]{\notehead{#1}{#2}{#3}#5};}%
+  \expandafter\xdef\csname na@\the\nnotes\endcsname{#4}%
+  \expandafter\xdef\csname nc@\the\nnotes\endcsname{#1}}
+\newcommand{\nb}[1]{\csname nb@#1\endcsname}
+\newcommand{\layoutnotes}{%
+  \global\prevbottom=\dimexpr\pgmargin pt+\ht\hdrbox+\dp\hdrbox\relax
+  \ifnum\nnotes>0
+    \foreach \k in {1,...,\the\nnotes}{%
+      \edef\a{\csname na@\k\endcsname}%
+      \tmpdim=\dimexpr\prevbottom+\notegap\relax
+      \ifdim \a pt<0pt\else
+        \pgfmathsetlength{\dimen0}{\pgmargin+\a*\s-7}%
+        \ifdim\dimen0>\tmpdim \tmpdim=\dimen0 \fi
+      \fi
+      \expandafter\xdef\csname ny@\k\endcsname{\the\tmpdim}%
+      \global\prevbottom=\dimexpr\tmpdim+\ht\nb{\k}+\dp\nb{\k}\relax}%
+    \global\limitdim=\dimexpr612pt-32pt\relax
+    \foreach \k in {\the\nnotes,...,1}{%
+      \tmpdim=\csname ny@\k\endcsname
+      \ifdim\dimexpr\tmpdim+\ht\nb{\k}+\dp\nb{\k}\relax>\limitdim
+        \tmpdim=\dimexpr\limitdim-\ht\nb{\k}-\dp\nb{\k}\relax
+        \expandafter\xdef\csname ny@\k\endcsname{\the\tmpdim}%
+      \fi
+      \global\limitdim=\dimexpr\tmpdim-\notegap\relax}%
+    \ifdim\limitdim<\dimexpr\pgmargin pt+\ht\hdrbox+\dp\hdrbox-\notegap\relax
+      \typeout{WARNING: notes overflow on textbook page \currentbookpage}\fi
+  \fi}
+\newcommand{\drawnotes}{%
+  \ifnum\nnotes>0
+    \foreach \k in {1,...,\the\nnotes}{%
+      \edef\a{\csname na@\k\endcsname}\edef\c{\csname nc@\k\endcsname}\edef\y{\csname ny@\k\endcsname}%
+      \node[anchor=north west,inner sep=0pt] at ($(O)+(\notex pt,-\y)$) {\usebox{\nb{\k}}};
+      \ifdim \a pt<0pt\else
+        \draw[\c,line width=0.6pt] ($(scan.north east)+(0,{-\a*\s pt})$) -- ++(6pt,0) -- ($(O)+(\notex pt-1pt,-\y-7pt)$);
+      \fi}%
+  \fi}
+\newcommand{\textbookpage}[8]{%
+  \clearpage\setpagesize{11in}{8.5in}\thispagestyle{empty}%
+  \def\currentbookpage{#5}%
+  \pgfmathsetmacro{\s}{\pgheight/#3}%
+  \pgfmathsetmacro{\pgright}{\pgmargin+#2*\s}%
+  \pgfmathsetmacro{\notex}{\pgright+20}%
+  \pgfmathsetmacro{\notew}{792-\notex-\pgmargin}%
+  \pgfmathsetmacro{\notetw}{\notew-10}%
+  \setbox\hdrbox=\vbox{\hsize=\notew pt\parskip=0pt
+    {\raggedright\sffamily\bfseries\color{forest}#4\par}\vspace{1pt}
+    {\sffamily\footnotesize\color{black!55}Miller \& Levine Biology, textbook page #5\par}\vspace{-1pt}
+    {\color{forest}\rule{\notew pt}{0.6pt}}\par\vspace{2pt}
+    \ifx\relax#6\relax\else{\small\raggedright #6\par}\fi}%
+  \global\nnotes=0 #8\layoutnotes
+  \null
+  \begin{tikzpicture}[remember picture,overlay]
+    \coordinate (O) at (current page.north west);
+    \node[anchor=north west,inner sep=0pt,draw=black!25] (scan) at ($(O)+(\pgmargin pt,-\pgmargin pt)$)
+      {\includegraphics[height=\pgheight pt]{#1}};
+    \node[anchor=north west,inner sep=0pt] at ($(O)+(\notex pt,-\pgmargin pt)$) {\usebox{\hdrbox}};
+    \node[anchor=south east,font=\scriptsize\sffamily,text=black!50,inner sep=0pt] at ($(O)+(792pt-\pgmargin pt,-603pt)$)
+      {Part 1 · the textbook, annotated \quad·\quad Miller \& Levine Biology (2019), p.\,#5 \quad·\quad page \thepage};
+    #7
+    \drawnotes
+  \end{tikzpicture}%
+  \clearpage\setpagesize{\portraitW}{\portraitH}}
+
+% Highlight one text line on the scan: \hl{color}{x0}{y0}{x1}{y1} in scan points (y down).
+\newcommand{\hl}[5]{%
+  \fill[#1,opacity=0.22] ($(scan.north west)+({(#2-1.5)*\s pt},{-(#3-1)*\s pt})$) rectangle
+                         ($(scan.north west)+({(#4+1.5)*\s pt},{-(#5+1)*\s pt})$);}
+% Numbered badge just left of a highlight.
+\newcommand{\badge}[4]{%
+  \node[circle,fill=#1,text=white,font=\scriptsize\sffamily\bfseries,inner sep=1pt,minimum size=10pt]
+    at ($(scan.north west)+({#3*\s pt-7pt},{-#4*\s pt})$) {#2};}
+\newcommand{\notehead}[3]{{\sffamily\bfseries\footnotesize\circlednum{#1}{#2}\ \color{#1}\MakeUppercase{#3}}\\[1pt]}
+\tikzset{notebox/.style={text width=\notetw pt,inner sep=4pt,fill=#1!7,draw=#1!55,line width=0.4pt,
+  font=\small,align=left,rounded corners=1.5pt}}
+
+% ------------------------------------------------------------------ figures in the guide text
+% Caption used under both book figures and new diagrams.
+\newcommand{\figcaption}[2]{\par\smallskip{\small\sffamily\raggedright #1\par}%
+  \ifx\relax#2\relax\else{\scriptsize\sffamily\color{black!55}Source: #2\par}\fi}
+% \bookfig{png}{width fraction}{caption}{source}: a figure cropped from one of the books.
+\newcommand{\bookfig}[4]{\par\Needspace{8\baselineskip}\medskip
+  \begin{minipage}{\linewidth}\centering
+    \fcolorbox{black!15}{white}{\includegraphics[width=#2\linewidth]{#1}}
+    \figcaption{#3}{#4}
+  \end{minipage}\par\medskip}
+% Several book figures side by side: \bookfigrow{\bookfigcol{w}{png}{height}{caption}{source}\hfill ...}
+\newcommand{\bookfigcol}[5]{\begin{minipage}[t]{#1\linewidth}\centering
+    \fcolorbox{black!15}{white}{\includegraphics[height=#3,width=0.95\linewidth,keepaspectratio]{#2}}
+    \figcaption{#4}{#5}\end{minipage}}
+\newcommand{\bookfigrow}[1]{\par\Needspace{10\baselineskip}\medskip\noindent#1\par\medskip}
+% New diagrams drawn for the guide: \begin{guidefig}...\end{guidefig}{caption}
+\newenvironment{guidefig}[1]{\par\Needspace{10\baselineskip}\medskip\begin{minipage}{\linewidth}\centering\def\guidefigcap{#1}}
+  {\figcaption{\guidefigcap}{}\end{minipage}\par\medskip}
+\tikzset{
+  gbox/.style={draw=#1,fill=#1!8,rounded corners=3pt,align=center,font=\small\sffamily,inner sep=5pt},
+  garr/.style={-{Stealth[length=2.4mm]},line width=1pt,draw=#1},
+  glab/.style={font=\scriptsize\sffamily,fill=white,inner sep=1.5pt,align=center},
+}

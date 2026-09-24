@@ -1,0 +1,26 @@
+% Negative feedback control of body temperature (teacher's slide 4; M&L p. 908).
+\begin{guidefig}{Each response opposes the change that caused it, so both loops are negative feedback (teacher's slide 4; M\&L p. 908).}
+\begin{tikzpicture}[
+  box/.style={draw=#1,fill=#1!8,rounded corners=3pt,align=center,font=\small\sffamily,text width=3.3cm,minimum height=1.05cm,inner sep=4pt},
+  arr/.style={-{Stealth[length=2.6mm]},line width=1.1pt,draw=#1},
+  lab/.style={font=\scriptsize\sffamily,fill=white,inner sep=1.5pt,align=center}]
+  \node[box=forest,text width=3.6cm,minimum height=1.4cm,font=\sffamily\bfseries] (c) at (0,0)
+    {Body temperature\\[-1pt]{\normalfont\small set point $\approx$ 37\,°C (98.6\,°F)}};
+  % hot loop (top)
+  \node[box=watchc] (hot)  at (-4.3,2.3) {Temperature \textbf{rises}\\(exercise, hot day)};
+  \node[box=watchc] (sweat) at (0,3.9)  {\textbf{Response:} sweat; cells slow down};
+  \node[box=vocabc] (cool) at (4.3,2.3)  {Evaporation cools the skin; temperature \textbf{falls}};
+  \draw[arr=watchc] (c.north west) to[bend left=12] node[lab,pos=0.45]{too high} (hot.south);
+  \draw[arr=watchc] (hot.north) to[bend left=18] node[lab]{hypothalamus\\detects it} (sweat.west);
+  \draw[arr=vocabc] (sweat.east) to[bend left=18] (cool.north);
+  \draw[arr=vocabc] (cool.south) to[bend left=12] node[lab,pos=0.55]{back to normal} (c.north east);
+  % cold loop (bottom)
+  \node[box=vocabc] (cold) at (4.3,-2.3) {Temperature \textbf{falls}\\(cold day)};
+  \node[box=vocabc] (shiver) at (0,-3.9) {\textbf{Response:} shiver; cells speed up};
+  \node[box=watchc] (warm) at (-4.3,-2.3) {Muscle and cell activity release heat; temperature \textbf{rises}};
+  \draw[arr=vocabc] (c.south east) to[bend left=12] node[lab,pos=0.45]{too low} (cold.north);
+  \draw[arr=vocabc] (cold.south) to[bend left=18] node[lab]{hypothalamus\\detects it} (shiver.east);
+  \draw[arr=watchc] (shiver.west) to[bend left=18] (warm.south);
+  \draw[arr=watchc] (warm.north) to[bend left=12] node[lab,pos=0.55]{back to normal} (c.south west);
+\end{tikzpicture}
+\end{guidefig}

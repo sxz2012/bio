@@ -1,0 +1,23 @@
+% Metabolism has two directions: building up (anabolic) and breaking down (catabolic).
+\begin{guidefig}{Metabolism runs in two directions. Energy released by breaking molecules down powers the reactions that build molecules up.}
+\begin{tikzpicture}[m/.style={circle,draw=#1!80!black,fill=#1!45,minimum size=0.42cm,inner sep=0pt}]
+  % building up
+  \node[font=\sffamily\bfseries,text=tipc] at (-3.4,1.55) {Building up (anabolic)};
+  \foreach \i in {0,1,2,3} \node[m=tipc] at (-5.2+\i*0.2,0.45-\i*0.28) {};
+  \foreach \i in {0,1,2} \node[m=tipc] at (-4.7+\i*0.35,0.6) {};
+  \draw[garr=tipc,line width=1.6pt] (-4.1,0.2) -- node[glab,above=9pt]{uses energy} (-2.8,0.2);
+  \foreach \i in {0,...,6} \node[m=tipc] at (-2.5+\i*0.36,0.2) {};
+  \draw[tipc!80!black,line width=1pt] (-2.5,0.2) -- (-0.34,0.2);
+  \foreach \i in {0,...,6} \node[m=tipc] at (-2.5+\i*0.36,0.2) {};
+  \node[font=\scriptsize\sffamily,align=center,text width=5.8cm] at (-3.4,-0.75)
+    {small molecules $\rightarrow$ big molecule\\\textbf{e.g.} photosynthesis (CO\textsubscript{2} + H\textsubscript{2}O $\rightarrow$ glucose), protein synthesis};
+  % breaking down
+  \node[font=\sffamily\bfseries,text=watchc] at (3.6,1.55) {Breaking down (catabolic)};
+  \draw[watchc!80!black,line width=1pt] (1.2,0.2) -- (3.36,0.2);
+  \foreach \i in {0,...,6} \node[m=watchc] at (1.2+\i*0.36,0.2) {};
+  \draw[garr=watchc,line width=1.6pt] (3.7,0.2) -- node[glab,above=9pt]{releases energy} (5,0.2);
+  \foreach \i/\dx/\dy in {0/0/0.35,1/0.4/0.05,2/0.8/0.4,3/0.25/-0.3,4/0.75/-0.2,5/1.1/0.15,6/1.2/-0.35} \node[m=watchc] at (5.3+\dx,0.2+\dy) {};
+  \node[font=\scriptsize\sffamily,align=center,text width=5.8cm] at (3.6,-0.75)
+    {big molecule $\rightarrow$ small molecules\\\textbf{e.g.} cellular respiration (glucose $\rightarrow$ CO\textsubscript{2} + H\textsubscript{2}O + energy), digestion};
+\end{tikzpicture}
+\end{guidefig}

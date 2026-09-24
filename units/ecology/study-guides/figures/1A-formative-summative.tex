@@ -1,0 +1,16 @@
+% Formative checks during a unit, summative at the end.
+\begin{guidefig}{Across a unit: many formative checks give feedback while you are still learning; the summative exam measures what you learned.}
+\begin{tikzpicture}
+  \draw[-{Stealth[length=3mm]},line width=1.2pt,black!55] (0,0) -- (14,0) node[right,font=\small\sffamily,text=black!70] {time};
+  \node[font=\scriptsize\sffamily,text=black!60,anchor=north] at (0.4,-0.1) {unit starts};
+  \foreach \x/\t in {1.6/Homework,3.9/CFA,6.2/Practice test,8.5/Homework} {
+    \node[gbox=tipc,text width=1.7cm,font=\scriptsize\sffamily] (f) at (\x,1.05) {\t};
+    \draw[tipc,line width=0.8pt] (f.south) -- (\x,0.05);
+    \draw[garr=tipc] (f.north east) to[bend left=50] node[glab,above]{feedback} ($(f.north east)+(0.55,0)$);
+  }
+  \node[font=\small\sffamily\bfseries,text=tipc] at (5,2.2) {Formative: practice, not graded, chance to improve};
+  \node[gbox=watchc,text width=2.4cm,minimum height=1.3cm,font=\small\sffamily\bfseries] (s) at (12,1.1) {Unit exam\\{\normalfont\scriptsize quiz or final too}};
+  \draw[watchc,line width=0.8pt] (s.south) -- (12,0.05);
+  \node[font=\small\sffamily\bfseries,text=watchc,align=center] at (12,2.35) {Summative: graded};
+\end{tikzpicture}
+\end{guidefig}

@@ -1,0 +1,14 @@
+% A self-reinforcing (positive feedback) loop from the teacher's slide 7.
+\begin{guidefig}{A self-reinforcing loop (teacher's slide 7). Each step reinforces the warming that started it, so the change keeps growing: positive feedback.}
+\begin{tikzpicture}
+  \node[gbox=watchc,text width=2.8cm] (a) at (0,1.5) {Earth warms};
+  \node[gbox=vocabc,text width=2.8cm] (b) at (3.6,0) {Ice melts, exposing dark soil and water};
+  \node[gbox=watchc,text width=2.8cm] (c) at (0,-1.5) {Darker surface absorbs more sunlight};
+  \node[gbox=watchc,text width=2.8cm] (d) at (-3.6,0) {Global temperature rises more};
+  \draw[garr=watchc] (a.east) to[bend left=20] (b.north);
+  \draw[garr=watchc] (b.south) to[bend left=20] node[glab,below right]{albedo drops} (c.east);
+  \draw[garr=watchc] (c.west) to[bend left=20] (d.south);
+  \draw[garr=watchc] (d.north) to[bend left=20] node[glab,above left]{reinforces} (a.west);
+  \node[font=\Large\sffamily\bfseries,text=watchc] at (0,0) {+};
+\end{tikzpicture}
+\end{guidefig}

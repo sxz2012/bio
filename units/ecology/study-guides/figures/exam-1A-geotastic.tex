@@ -1,0 +1,12 @@
+% Hypothetical class data from the Geotastic game.
+\begin{guidefig}{Hypothetical class data from the Geotastic game: mean distance between the guessed and the actual location ($n = 28$ students per trial).}
+\begin{tikzpicture}
+\begin{axis}[width=9.5cm,height=5.8cm,xmin=-0.5,xmax=8.5,ymin=0,ymax=3000,xtick={0,2,4,6,8},
+  xlabel={Number of advances allowed},ylabel={Mean distance from actual location (km)},
+  axis x line*=bottom,axis y line*=left,scaled y ticks=false,
+  yticklabel style={/pgf/number format/1000 sep={,}},
+  ylabel style={font=\small\sffamily},xlabel style={font=\small\sffamily},tick label style={font=\small\sffamily}]
+  \addplot[vocabc,line width=1.2pt,mark=*,mark options={fill=vocabc}] coordinates {(0,2400) (2,1500) (4,900) (6,650) (8,400)};
+\end{axis}
+\end{tikzpicture}
+\end{guidefig}

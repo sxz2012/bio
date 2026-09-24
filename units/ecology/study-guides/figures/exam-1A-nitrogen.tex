@@ -1,0 +1,13 @@
+% Hypothetical data: marsh grass height vs nitrogen added, mean ± 2 SE, n = 12 plots per group.
+\begin{guidefig}{Hypothetical data. Mean height of marsh grass after 8 weeks. Error bars show $\pm 2$ standard errors of the mean ($n = 12$ plots per group).}
+\begin{tikzpicture}
+\begin{axis}[width=9.5cm,height=6cm,ybar,bar width=0.9cm,ymin=0,ymax=75,
+  xlabel={Nitrogen added (g/m\textsuperscript{2})},ylabel={Mean grass height (cm)},
+  symbolic x coords={0,5,10,20},xtick=data,axis x line*=bottom,axis y line*=left,
+  ylabel style={font=\small\sffamily},xlabel style={font=\small\sffamily},tick label style={font=\small\sffamily},
+  nodes near coords,nodes near coords style={font=\scriptsize\sffamily,yshift=9pt},enlarge x limits=0.18]
+  \addplot[fill=tipc!55,draw=tipc!80!black,error bars/.cd,y dir=both,y explicit,error bar style={black,line width=0.8pt}]
+    coordinates {(0,32) +- (0,3) (5,45) +- (0,4) (10,58) +- (0,5) (20,60) +- (0,6)};
+\end{axis}
+\end{tikzpicture}
+\end{guidefig}

@@ -1,0 +1,20 @@
+% Deliberate practice and the process of science are the same loop.
+\begin{guidefig}{Deliberate practice (left) and science (right) run on the same loop: try, get feedback, fix, try again.}
+\begin{tikzpicture}[node distance=1cm]
+  \foreach \cx/\col/\title/\a/\b/\c/\d in {
+      0/tipc/Deliberate practice/{Try it (homework, practice test)}/Get feedback/Find the exact gap/Practice that skill,
+      8.2/vocabc/Science/Observe and ask a question/Hypothesis and test/Peer review and feedback/Revise the explanation}{
+    \node[font=\sffamily\bfseries,text=\col] at (\cx,2.75) {\title};
+    \draw[\col!35,line width=5pt] (\cx,0) circle (1.75);
+    \node[gbox=\col,text width=2.5cm] (t) at (\cx,1.65) {\a};
+    \node[gbox=\col,text width=2.1cm] (r) at (\cx+2.05,0) {\b};
+    \node[gbox=\col,text width=2.5cm] (b) at (\cx,-1.75) {\c};
+    \node[gbox=\col,text width=2.1cm] (l) at (\cx-2.05,0) {\d};
+    \draw[garr=\col] (t.east) to[bend left=25] (r.north);
+    \draw[garr=\col] (r.south) to[bend left=25] (b.east);
+    \draw[garr=\col] (b.west) to[bend left=25] (l.south);
+    \draw[garr=\col] (l.north) to[bend left=25] (t.west);
+  }
+  \node[font=\Large\sffamily\bfseries,text=forest] at (4.1,0) {$=$};
+\end{tikzpicture}
+\end{guidefig}

@@ -1,0 +1,14 @@
+% A controlled experiment: only the independent variable differs between groups.
+\begin{guidefig}{A controlled experiment. The two groups differ in only one thing, the independent variable, so any difference in the result must come from it.}
+\begin{tikzpicture}
+  \node[gbox=keyc,text width=4cm,minimum height=2.4cm] (e) at (-3.5,0)
+    {\textbf{Experimental group}\\[3pt]drinks a \textbf{sports drink}\\[3pt]{\scriptsize 20 min exercise · 22\,°C room · same amount drunk}};
+  \node[gbox=vocabc,text width=4cm,minimum height=2.4cm] (c) at (3.5,0)
+    {\textbf{Control group}\\[3pt]drinks \textbf{plain water}\\[3pt]{\scriptsize 20 min exercise · 22\,°C room · same amount drunk}};
+  \node[font=\scriptsize\sffamily,text=keyc,align=center] at (0,1.55) {\textbf{independent variable}: the drink (the only difference)};
+  \node[font=\scriptsize\sffamily,text=black!65,align=center] at (0,-0.35) {\textbf{controlled}\\\textbf{variables}\\(kept the same)};
+  \node[gbox=forest,text width=6cm] (d) at (0,-2.2) {\textbf{Dependent variable} (measured in both):\\body temperature after exercise};
+  \draw[garr=keyc] (e.south) -- (d.north west);
+  \draw[garr=vocabc] (c.south) -- (d.north east);
+\end{tikzpicture}
+\end{guidefig}

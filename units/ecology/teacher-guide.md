@@ -4,7 +4,29 @@ Source: [Ecology Unit Guide (KJ).docx](../../Ecology%20Unit%20Guide%20%28KJ%29.d
 
 This reference preserves the teacher’s learning targets, vocabulary, classwork titles, and study questions. Repeated merged table cells are included only once. Teacher study directions below are course material. No answers or supplemental biology explanations have been added.
 
-The listed classwork has not yet been supplied. Exam date, exam scope, and textbook title or edition are not specified in this guide.
+The listed classwork has not yet been supplied. Exam date and exam scope are not specified in this guide.
+
+## Textbook lessons cited by the guide
+
+The guide cites lessons in the class textbook, *Miller & Levine Biology* (Pearson, © 2019). The page ranges below come from the local scan in `books/` and are book page numbers (PDF page − 34). The guide doesn't name the textbook; this project's notes identify it.
+
+| Target | Lesson | Title | Book pages |
+|---|---|---|---|
+| 1B | 1.3 | Patterns of Life | 22–29 |
+| 3A + 3B | 2.2 | Properties of Water | 47–51 |
+| 1C | 3.1 | Introduction to Global Systems | 78–84 |
+| 4B + 4C | 3.2 | Climate, Weather, and Life | 85–91 |
+| 1C | 4.1 | Energy, Producers, and Consumers | 114–117 |
+| 1C | 4.2 | Energy Flow in Ecosystems | 118–122 |
+| 3A + 3B, 4A | 4.3 | Cycles of Matter | 123–131 |
+| 2C | 5.1 | How Populations Grow | 144–151 |
+| 2C | 5.2 | Limits to Growth | 152–157 |
+| 2C | 5.3 | Human Population Growth | 158–161 |
+| 1C | 6.1 | Habitats, Niches, and Species Interactions | 174–181 |
+| 2A | 6.3 | Biodiversity, Ecosystems, and Resilience | 186–189 |
+| 2B | 7.2 | Causes and Effects of Global Change | 206–217 |
+| 4B + 4C | 7.3 | Measuring and Responding to Change | 218–222 |
+| 4D | 7.4 | Sustainability | 223–225 |
 
 ## 1A – The development of academic and personal skills occurs through deliberate practice.
 
@@ -276,6 +298,7 @@ The listed classwork has not yet been supplied. Exam date, exam scope, and textb
 ### Related classwork
 
 - Waterways video lecture and notes
+- Waterways Vocab Practice
 - Waterways flowchart
 
 ### Study questions and teacher notes
@@ -493,6 +516,7 @@ These links were extracted from the teacher’s document; their contents have no
 - [Evo 2 Study Guide](<https://drive.google.com/file/d/12YCBKXKg8YS44U-_E7fMkBsZweKnoNdF/view>)
 - [Waterways video lecture](<https://www.youtube.com/watch?v=knvq99iYap8&list=PLcujWariPyjJI58MYa6FlMsedMFIG3lgT&index=2&ab_channel=MrJonesMV>)
 - [notes](<https://docs.google.com/document/d/19amWCqclj5ze7N3rbEAs3tGlYjTLdkm-qPI-ItLsJpM/edit>)
+- [Waterways Vocab Practice](<https://docs.google.com/document/d/1hojI3TpnWWrnjBcfHiMqP47Y9LPg9VfaxdbT083QXns/edit?usp=sharing>)
 - [Waterways flowchart](<https://docs.google.com/document/d/0B8skq2Td9-KscE1oNWhKZUdGN00/edit?resourcekey=0-OwaIKmchHHeQe_VjeguesA>)
 - [Sustainable Water reading questions](<https://docs.google.com/document/d/11Wn7sxI0ZBTncfXobrgEqyaTgm3ThxeXuy0PQghJZ0c/edit>)
 - [Sustainable Water practice questions](<https://docs.google.com/presentation/d/1fUZVFaIXfTfRwDPvCsqjn2vECXt0jJ1MPCLph8L7WxY/edit#slide=id.p>)

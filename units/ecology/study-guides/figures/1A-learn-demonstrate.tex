@@ -1,0 +1,15 @@
+% Q2: how students know what to learn, and how they show it.
+\begin{guidefig}{Know the target, practice with feedback, then show what you know. A retake (score below 80\%) sends you around the loop again.}
+\begin{tikzpicture}[node distance=0.55cm]
+  \node[gbox=forest,text width=2.1cm] (k) {\textbf{KUDOS}\\{\scriptsize big picture}};
+  \node[gbox=forest,text width=2.1cm,right=of k] (u) {\textbf{Unit guide}\\{\scriptsize targets, vocab, study questions}};
+  \node[gbox=forest,text width=2.1cm,right=of u] (c) {\textbf{Class materials}\\{\scriptsize notes, slides, labs}};
+  \node[gbox=tipc,text width=2.1cm,right=of c] (f) {\textbf{Formative}\\{\scriptsize practice + feedback}};
+  \node[gbox=watchc,text width=2.1cm,right=of f] (s) {\textbf{Summative}\\{\scriptsize show mastery}};
+  \foreach \a/\b in {k/u,u/c,c/f,f/s} \draw[garr=forest] (\a) -- (\b);
+  \draw[garr=tipc] (f.south) to[bend left=70,looseness=2.2] node[glab,below]{fix the gaps} ($(f.south)+(-0.7,0)$);
+  \draw[garr=watchc,dashed] (s.north) to[bend right=25] node[glab,above]{retake: go around again} (f.north);
+  \node[font=\scriptsize\sffamily,text=black!60] at ($(k.north)!0.5!(c.north)+(0,0.55)$) {\textbf{know what to learn}};
+  \node[font=\scriptsize\sffamily,text=black!60] at ($(f.north)!0.5!(s.north)+(0,1.3)$) {\textbf{demonstrate it}};
+\end{tikzpicture}
+\end{guidefig}

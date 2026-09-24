@@ -1,0 +1,363 @@
+# Annotated textbook pages for learning target 1B (Miller & Levine Biology, 2019).
+# `find` / `to` must match the words printed on the page; the build highlights everything between them.
+# kinds: key (key idea), vocab, tip (make it make sense), watch (common mistake), link (connection to class)
+
+how_to_use: |
+  You don't need the textbook to use this guide. Every textbook page that matters for 1B is copied into **Part 1**,
+  with the important sentences highlighted. Each highlight has a numbered badge that matches a note in the column beside the page.
+  The notes explain hard words, answer the textbook's questions, and connect the page to what your teacher asks about in class.
+
+  Part 1 has three groups of pages:
+
+  - **Lesson 1.3** (pp. 22–25 and the review on p. 29): what makes something alive, metabolism, homeostasis. This is the lesson the unit guide lists for 1B.
+  - **Chapter 27** (pp. 907, 908, 932): how feedback keeps the body stable. The class textbook explains feedback here, much later in the book.
+  - **Lessons 1.1 and 1.2** (pp. 12 and 21): controlled experiments, models, and arguing from evidence, the "scientific investigation" half of the 1B target.
+
+  After Part 1 come the other sources (Campbell covers positive feedback, which the class textbook doesn't), a summary, the vocabulary explained in detail, and full answers to the teacher's study questions. Cover the answers in Part 5 and try each question out loud before you check.
+
+  Notes are color-coded:
+
+pages:
+  - page: 22
+    lesson: "Lesson 1.3 Patterns of Life"
+    intro: "The lesson the unit guide lists for 1B. This page answers the first study question: what are the criteria for something to be alive?"
+    notes:
+      - find: "sexual reproduction"
+        to: "evolve"
+        kind: vocab
+        label: "Lesson vocabulary"
+        text: "For 1B, the key words are **metabolism**, **stimulus**, and **homeostasis**. Each one is explained on p. 24."
+      - find: "Biology is the study of life. But what is life?"
+        kind: key
+        text: "The big question of this lesson: what makes something **alive**? It's harder to answer than it sounds."
+      - find: "No single characteristic is enough"
+        to: "describe a living thing."
+        kind: watch
+        text: "You can't use **one** trait to decide if something is alive. Living things show **all** of the characteristics together."
+      - find: "a firefly and a fire both give off light"
+        kind: tip
+        text: "A fire gives off light, moves, \"grows,\" and uses energy, but it isn't alive: it has no cells, no DNA, and no homeostasis. That's why you need the whole list."
+      - find: "such as viruses"
+        to: "nonliving things."
+        kind: link
+        text: "**Viruses** are the classic borderline case. The What Is Life? lecture asks whether they're alive. See p. 24 and the answer to study question 1."
+      - find: "Living things are made up of basic"
+        to: "changing over time."
+        kind: key
+        label: "The 8 criteria for life"
+        text: "**1** made of cells, **2** reproduce, **3** universal genetic code (DNA), **4** grow and develop, **5** obtain and use materials and energy, **6** respond to the environment, **7** keep a stable internal environment, **8** evolve. Memorize this list; it answers study question 1."
+
+  - page: 23
+    lesson: "Lesson 1.3 Patterns of Life"
+    intro: "The first four characteristics of life."
+    notes:
+      - find: "Living things, or organisms, are made up of"
+        to: "complex and highly organized."
+        kind: vocab
+        label: "organism · cells (criterion 1)"
+        text: "An **organism** is an individual living thing. The **cell** is the smallest unit that is alive. Unicellular organisms are one cell (bacteria); multicellular ones have many (you)."
+      - find: "All organisms produce new organisms"
+        to: "has a single parent."
+        kind: vocab
+        label: "reproduction (criterion 2)"
+        text: "**Sexual:** two parents; offspring differ from them. **Asexual:** one parent; offspring are copies. A sterile mule can't reproduce but is still alive, because the criteria describe living things in general, not every individual."
+      - find: "Biologists now know that the directions for inheritance"
+        to: "every organism on Earth."
+        kind: vocab
+        label: "genetic code (criterion 3)"
+        text: "Instructions for traits are stored in **DNA**, and nearly every organism uses the same code. That's why it's called *universal*."
+      - find: "All living things grow during at least part"
+        to: "different functions."
+        kind: vocab
+        label: "grow and develop (criterion 4)"
+        text: "**Growth** is getting bigger. **Development** is changing form: one fertilized egg divides into many cells that **differentiate** into different types (egg → caterpillar → butterfly)."
+
+  - page: 24
+    lesson: "Lesson 1.3 Patterns of Life"
+    intro: "The last four characteristics, and the definitions of metabolism, stimulus, and homeostasis."
+    notes:
+      - find: "Organisms also need materials and energy just to stay alive."
+        to: "life processes is called"
+        kind: vocab
+        label: "metabolism (criterion 5)"
+        text: "**Metabolism** is *all* the chemical reactions in an organism, both building molecules up (photosynthesis, protein synthesis) and breaking them down (cellular respiration, digestion). This is study question 2."
+      - find: "A stimulus is a signal to which an organism responds."
+        to: "from within an organism."
+        kind: vocab
+        label: "stimulus (criterion 6)"
+        text: "A **stimulus** is a signal an organism reacts to. **External:** light, temperature (sunflowers turning toward the sun). **Internal:** from inside the body (thirst). The plural is *stimuli*."
+      - find: "most organisms must keep internal conditions"
+        to: "you feel thirsty."
+        kind: vocab
+        label: "homeostasis (criterion 7)"
+        text: "**Homeostasis** means keeping internal conditions (temperature, water) *fairly constant* even when the outside changes. Thirst is an internal stimulus that tells you to drink and restore water balance. It's a **feedback loop**, explained on pp. 907–908."
+      - find: "As a group, however"
+        to: "change over time."
+        kind: watch
+        label: "evolution (criterion 8)"
+        text: "**Groups** evolve over many generations; **individuals** do not. Your traits don't evolve during your lifetime."
+      - find: "Viruses are particles made"
+        to: "and evolve."
+        kind: link
+        label: "Are viruses alive?"
+        text: "Viruses **reproduce and evolve**, but only inside a host cell. They have **no cells and no metabolism** of their own. Most biologists call them nonliving, or \"at the border.\" Pick a side and support it with the criteria (CER)."
+      - find: "Explain Why is it important"
+        kind: tip
+        label: "Reading check: answer"
+        text: "Cells only work within a narrow range of conditions. If temperature or water levels go too far out of range, cells can't carry out metabolism and the organism can get sick or die (for example, heatstroke or dehydration)."
+
+  - page: 25
+    lesson: "Lesson 1.3 Patterns of Life"
+    intro: "Crosscutting concepts: big ideas that appear in every unit. Three of them use 1B vocabulary."
+    notes:
+      - find: "The study of biology revolves around several crosscutting"
+        to: "function."
+        kind: key
+        text: "Seven big ideas that show up all year. For 1B, focus on **cause and effect**, **systems and system models**, and **stability and change**."
+      - find: "Cause and Effect: Mechanism and Explanation"
+        to: "cause and effect."
+        kind: vocab
+        label: "mechanism"
+        text: "A **mechanism** is *how* something happens, the chain of causes and effects. Sweating is a mechanism for cooling; a feedback loop is a mechanism for homeostasis."
+      - find: "Systems and System Models"
+        to: "circulatory systems."
+        kind: vocab
+        label: "system · model"
+        text: "A **system** is a set of parts that interact. Blood pressure is controlled by four body systems working together. A **model** is a simplified picture of a system, like the feedback-loop diagrams you draw in class."
+      - find: "Living things maintain a relatively stable"
+        to: "fatal consequences."
+        kind: key
+        label: "Stability and change"
+        text: "Homeostasis keeps the body **stable** while conditions **change**. If homeostasis breaks down, the result can be serious or fatal, which is why feedback matters (study question 3)."
+
+  - page: 29
+    lesson: "Lesson 1.3 Patterns of Life"
+    intro: "The end of Lesson 1.3. The top half is lab safety (not on the study questions). The notes answer the lesson review."
+    notes:
+      - find: "How do living things differ from nonliving things?"
+        kind: tip
+        label: "Review 1–3: answers"
+        text: "**1.** Living things have *all* the characteristics of life: cells, reproduction, DNA, growth and development, use of materials and energy, response to stimuli, homeostasis, and evolution. Nonliving things may share a few but never all. **2.** The crosscutting concepts connect all branches of biology with the same big ideas (cause and effect, systems, stability and change, …). **3.** Biology can be studied at every scale, from molecules and cells to organisms, ecosystems, and the whole planet."
+      - find: "Why do scientists use a common system"
+        kind: tip
+        label: "Review 4–6: answers"
+        text: "**4.** So scientists everywhere can compare and **replicate** each other's measurements (the metric system). **5.** All organisms share the same molecules and cell processes, so patterns at that level explain features of all life. **6.** 250 g × 10 = 2,500 g = **2.5 kg**."
+
+  - page: 907
+    lesson: "Lesson 27.1 Organization of the Human Body"
+    intro: "From much later in the textbook: how homeostasis actually works. The key idea is negative feedback."
+    notes:
+      - find: "This process is called homeostasis"
+        to: "matter of life or death."
+        kind: vocab
+        label: "homeostasis"
+        text: "Homeostasis = \"keeping things the **same**\": relatively constant internal conditions, even when the environment inside or outside changes."
+      - find: "Root Words The root word"
+        kind: vocab
+        label: "equilibrium"
+        text: "*Stasis* means \"a state of balance or **equilibrium**.\" Homeo- (same) + stasis (balance) = staying in balance."
+      - find: "watched someone driving"
+        to: "one way or the other."
+        kind: tip
+        label: "dynamic equilibrium"
+        text: "The car stays in its lane only because the driver keeps making small corrections. That's **dynamic equilibrium**: stable overall, but always adjusting. The body keeps conditions within a **range** the same way."
+      - find: "When the temperature within the house drops below"
+        to: "within a narrow range."
+        kind: vocab
+        label: "model · set point"
+        text: "The thermostat is a **model** of homeostasis. The **set point** is the target temperature, and the **sensor** detects when the room drifts too far from it."
+      - find: "Feedback inhibition, or negative feedback, is the process"
+        to: "opposes the original stimulus."
+        kind: vocab
+        label: "negative feedback"
+        text: "**Negative feedback** (feedback inhibition): the response **opposes** the change. Too cold → heat on → warmer → heat off. It *negates* the change."
+      - find: "Systems controlled by feedback inhibition"
+        kind: key
+        text: "Negative feedback makes a system **stable**. That's why organisms use it for homeostasis."
+      - find: "Describe another example"
+        kind: tip
+        label: "Reading check: answer"
+        text: "Examples: a car's cruise control (slows → more gas → speeds up → less gas), an air conditioner, an oven, or a toilet tank that refills until the float shuts the valve."
+
+  - page: 908
+    lesson: "Lesson 27.1 Organization of the Human Body"
+    intro: "The body's thermostat: negative feedback keeps your temperature near 37 °C. This is the teacher's slide 4 example."
+    notes:
+      - find: "Could biological systems achieve homeostasis"
+        to: "home heating system."
+        kind: key
+        text: "Your body regulates **temperature** the same way a thermostat does, through negative feedback. Figure 27-4 shows both loops: too hot and too cold."
+      - find: "A part of the brain called the hypothalamus"
+        to: "monitor body temperature."
+        kind: vocab
+        label: "sensor · control center"
+        text: "The **hypothalamus** (part of the brain) is the body's thermostat. Its nerve cells **sense** body temperature and send signals that start or stop warming and cooling."
+      - find: "If your body temperature drops well below"
+        to: "body temperature to rise."
+        kind: key
+        label: "Too cold loop"
+        text: "Too cold → hypothalamus → cells speed up **metabolism** and muscles **shiver** → heat released → temperature rises back to normal."
+      - find: "If body temperature rises too far above"
+        to: "by evaporation."
+        kind: key
+        label: "Too hot loop"
+        text: "Too hot → hypothalamus → cells slow down and you **sweat** → evaporation cools the skin → temperature falls back to normal. Each response opposes the change, so both loops are **negative feedback**."
+      - find: "How Do You Respond"
+        kind: link
+        text: "Blinking when something flies at your face is a **response to an external stimulus**, another characteristic of life (p. 24)."
+
+  - page: 932
+    lesson: "Lesson 27.3 Human Systems II"
+    intro: "Two more negative feedback loops: water balance and blood sugar."
+    notes:
+      - find: "Like most body systems, the endocrine system"
+        to: "inhibits the system."
+        kind: key
+        text: "Hormone systems are also controlled by **negative feedback**: a rise in something \"feeds back\" to shut the system down."
+      - find: "Water balance in the body is one example"
+        to: "blood water content."
+        kind: key
+        label: "Water balance loop"
+        text: "Sweating → water lost → blood too concentrated → hypothalamus → ADH (kidneys **save** water) and **thirst** (you drink) → water back to normal. Drinking a lot → less ADH → kidneys remove more water. Upper **and** lower limits = a **range**."
+      - find: "Glucose concentration in the bloodstream"
+        to: "back to normal."
+        kind: key
+        label: "Blood sugar loop"
+        text: "After a meal: glucose **high** → pancreas releases **insulin** → cells store glucose → level falls. Between meals: glucose **low** → **glucagon** → liver releases glucose → level rises. Two opposing hormones keep it in range."
+      - find: "Insulin and glucagon are opposing hormones"
+        kind: vocab
+        label: "range"
+        text: "\"Within a normal **range**\": homeostasis doesn't keep glucose at one exact number. It keeps it between limits (about 70–110 mg per 100 mL of blood)."
+      - find: "Summarize How does the endocrine"
+        kind: tip
+        label: "Reading check: answer"
+        text: "When blood glucose **rises**, the pancreas releases **insulin**, which makes cells take up and store glucose. When it **falls**, the pancreas releases **glucagon**, which makes the liver release glucose. Both bring the level back to normal."
+
+  - page: 12
+    lesson: "Lesson 1.1 What Is Science?"
+    intro: "Back to scientific investigation, the first half of the 1B target. This page defines the parts of a controlled experiment."
+    notes:
+      - find: "Inference, combined with a creative imagination"
+        to: "support or reject them."
+        kind: vocab
+        label: "hypothesis"
+        text: "A **hypothesis** is a testable explanation. Data from experiments either **support** or **reject** it; they never \"prove\" it."
+      - find: "Testing hypotheses often involves designing"
+        to: "controlled experiment."
+        kind: vocab
+        label: "controlled experiment"
+        text: "A **controlled experiment** changes **one** variable and keeps everything else the same, so any difference in results must come from that one variable."
+      - find: "important to control variables because"
+        to: "called the dependent variable."
+        kind: vocab
+        label: "independent · dependent variable"
+        text: "**Independent variable:** what *you* change on purpose (amount of nitrogen). **Dependent variable:** what you measure, which *depends* on it (grass height)."
+      - find: "Typically, experiments are divided into control"
+        to: "a single pair."
+        kind: vocab
+        label: "experimental control"
+        text: "The **control group** gets the same conditions minus the independent variable. It's the comparison that shows whether the variable had any effect. Using several groups (**replication**) makes results more reliable."
+      - kind: link
+        label: "A 1B-style experiment"
+        text: "Does a sports drink help keep body temperature stable during exercise? **Independent variable:** drink (sports drink or water). **Dependent variable:** body temperature after 20 minutes of exercise. **Control group:** the water group. **Keep constant:** exercise, room temperature, time, and amount drunk."
+
+  - page: 21
+    lesson: "Lesson 1.2 Science in Context"
+    intro: "Models, explanations, and arguments: the methods named in the 1B target (\"explanations … revised through argumentation\")."
+    notes:
+      - find: "Developing and Using Models"
+        to: "communicate ideas to others."
+        kind: vocab
+        label: "model"
+        text: "A **model** can be a drawing, flowchart, physical object, equation, or computer simulation. Your feedback-loop diagrams and the thermostat are both models of homeostasis."
+      - find: "An explanation describes how variables relate"
+        to: "supported by evidence."
+        kind: key
+        text: "An **explanation** tells *how variables relate* and is backed by evidence. Example: \"sweating lowers body temperature because evaporation removes heat.\""
+      - find: "In science, an argument is a reason"
+        to: "responding thoughtfully."
+        kind: key
+        label: "Argument from evidence"
+        text: "This is what the 1B target means by **revised through argumentation**: scientists use evidence to persuade, listen to critiques, and improve their explanations. CER (claim, evidence, reasoning) is how you practice it."
+      - find: "How are both curiosity and skepticism useful"
+        kind: tip
+        label: "Review 1–2: answers"
+        text: "**1.** Curiosity leads scientists to ask new questions; skepticism makes them demand evidence before accepting an answer. **2.** Peer reviewers find mistakes and weak spots, so scientists can fix their methods and explanations before (and after) publishing."
+      - find: "Apply Concepts An advertisement claims"
+        kind: tip
+        label: "Review 3–6: answers"
+        text: "**3.** Science affects society (health, environment, laws), and society's needs shape which questions science studies. **4.** Testing ideas is how scientists and engineers find out whether an explanation or design actually works. **5.** Be skeptical: the claim hasn't been checked by independent experts, so there's no reliable evidence yet that the drink works. **6.** The researcher works for the company that sells the pesticide, so the study could be **biased**. Independent scientists should repeat it."
+
+# Figures cropped from the books for Parts 2–5 (placed in 1B.md with <!-- bookfig: id -->).
+# crop: [x0, y0, x1, y1] in points from the page's top-left corner.
+figures:
+  c-properties:
+    book: C
+    page: 3
+    label: "Figure 1.2"
+    crop: [60, 222, 606, 752]
+    width: 0.85
+    caption: "Some properties of life: order, evolutionary adaptation, regulation (homeostasis), reproduction, energy processing, growth and development, and response to the environment."
+  c-levels:
+    book: C
+    page: 4
+    label: "Figure 1.3"
+    crop: [28, 262, 612, 752]
+    width: 0.8
+    caption: "Levels of biological organization, zooming in from the biosphere to one organism. An organism is an individual living thing; many organisms of one species form a population."
+  c-40-8:
+    book: C
+    page: 894
+    label: "Figure 40.8"
+    crop: [25, 48, 306, 592]
+    width: 0.48
+    caption: "(a) A thermostat keeps room temperature near its set point. (b) Every negative feedback loop has the same parts: a sensor, a control center, and an effector whose response pushes the variable back toward the set point."
+  c-glucose-fb:
+    book: C
+    page: 10
+    label: "Figure 1.10"
+    crop: [25, 48, 306, 302]
+    width: 0.52
+    caption: "Negative feedback for blood sugar: high glucose → the pancreas releases insulin → cells take up glucose → glucose falls → insulin release slows."
+  c-40-9:
+    book: C
+    page: 894
+    label: "Figure 40.9"
+    crop: [310, 48, 588, 252]
+    width: 0.55
+    caption: "(a) Negative feedback: the response reduces the stimulus. (b) Positive feedback: the response increases the stimulus."
+  c-energyflow:
+    book: C
+    page: 9
+    label: "Figure 1.9"
+    crop: [60, 48, 562, 354]
+    width: 0.82
+    caption: "Metabolism across a whole ecosystem: photosynthesis builds sugar using light energy, organisms break sugar down to do work, energy leaves as heat, and chemicals cycle back."
+  c-models:
+    book: C
+    page: 36
+    label: "Figure 2.10"
+    crop: [30, 48, 302, 502]
+    width: 0.5
+    caption: "Four models of the same molecules: electron diagrams, structural formulas, and space-filling models. Each model shows some features and leaves others out. The thermostat in Figure 40.8 is a model too."
+  c-metamorphosis:
+    book: C
+    page: 725
+    label: "Figure 33.42"
+    crop: [60, 46, 616, 352]
+    width: 0.85
+    caption: "Growth and development: a butterfly's complete metamorphosis, from larva (caterpillar) to pupa to adult. Development means changing form, not just getting bigger."
+  c-thermo:
+    book: C
+    page: 901
+    label: "Figure 40.18"
+    crop: [60, 46, 616, 430]
+    width: 0.82
+    caption: "The hypothalamus works like a thermostat. Too warm: sweating and widened skin blood vessels cool the body. Too cold: shivering and narrowed blood vessels warm it."
+  c-glucose:
+    book: C
+    page: 928
+    label: "Figure 41.23"
+    crop: [28, 400, 614, 754]
+    width: 0.8
+    caption: "Blood sugar control: insulin lowers blood glucose after eating and glucagon raises it between meals, keeping it near 70–110 mg per 100 mL."

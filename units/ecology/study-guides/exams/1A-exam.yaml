@@ -1,0 +1,9 @@
+# Book figures used in the 1A mock exam (placed with <!-- bookfig: id -->).
+figures:
+  c-mice-results:
+    book: C
+    page: 20
+    label: "Figure 1.25"
+    crop: [58, 290, 380, 482]
+    width: 0.68
+    caption: "Percentage of light and dark mouse models attacked by predators in a beach habitat and an inland habitat."

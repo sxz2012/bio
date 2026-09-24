@@ -1,0 +1,14 @@
+% Induction goes up (specific -> general), deduction comes down (general -> specific).
+\begin{guidefig}{Induction climbs from specific observations to a general idea; deduction comes back down to a specific prediction you can test. Science cycles between them.}
+\begin{tikzpicture}
+  \node[gbox=forest,text width=5.2cm,minimum height=1cm] (g) at (0,2.6)
+    {\textbf{General idea}\\{\scriptsize ``Marsh grass growth is limited by nitrogen.''}};
+  \node[gbox=vocabc,text width=4.1cm] (o) at (-3.6,-0.6)
+    {\textbf{Specific observations}\\{\scriptsize tall grass here, short grass there, tall grass where there is more nitrogen …}};
+  \node[gbox=keyc,text width=4.1cm] (p) at (3.6,-0.6)
+    {\textbf{Specific prediction}\\{\scriptsize ``If I add nitrogen to these plots, then the grass will grow taller.''}};
+  \draw[garr=vocabc,line width=1.6pt] (o.north) to[bend left=15] node[glab,left=2pt,text=vocabc]{\textbf{INDUCTION}\\specific $\rightarrow$ general\\{\scriptsize probably true}} (g.west);
+  \draw[garr=keyc,line width=1.6pt] (g.east) to[bend left=15] node[glab,right=2pt,text=keyc]{\textbf{DEDUCTION}\\general $\rightarrow$ specific\\{\scriptsize if \dots\ then \dots}} (p.north);
+  \draw[garr=black!50,dashed] (p.south) to[bend left=18] node[glab,below]{run the experiment: new observations} (o.south);
+\end{tikzpicture}
+\end{guidefig}

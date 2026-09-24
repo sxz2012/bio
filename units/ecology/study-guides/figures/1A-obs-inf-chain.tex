@@ -1,0 +1,13 @@
+% Q3: observation -> inference -> hypothesis -> test, with the salt marsh example.
+\begin{guidefig}{Observation starts the chain; each inference becomes a testable hypothesis, and new observations test it.}
+\begin{tikzpicture}[node distance=0.5cm]
+  \node[gbox=vocabc,text width=2.7cm] (o) {\textbf{Observation}\\{\scriptsize what you detect}};
+  \node[gbox=keyc,text width=2.7cm,right=of o] (i) {\textbf{Inference}\\{\scriptsize what you conclude}};
+  \node[gbox=keyc,text width=2.7cm,right=of i] (h) {\textbf{Hypothesis}\\{\scriptsize a testable inference}};
+  \node[gbox=tipc,text width=2.7cm,right=of h] (t) {\textbf{Test}\\{\scriptsize new observations}};
+  \foreach \a/\b in {o/i,i/h,h/t} \draw[garr=forest] (\a) -- (\b);
+  \draw[garr=tipc,dashed] (t.south) to[bend left=18] node[glab,below]{supported or rejected $\rightarrow$ new questions} (o.south);
+  \foreach \n/\t in {o/Grass is taller at location B.,i/Something limits growth at A.,h/Nitrogen limits growth.,t/Add nitrogen; +N plots grow taller.}
+    \node[font=\scriptsize\itshape,text width=2.7cm,align=center,text=black!70,above=2pt of \n] {\t};
+\end{tikzpicture}
+\end{guidefig}

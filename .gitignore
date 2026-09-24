@@ -1,4 +1,8 @@
 .DS_Store
 *.crdownload
 tmp/tools/
-book/
+/book/
+books/
+# Study guide PDFs contain copied textbook pages: keep them local, never publish.
+output/private/
+units/ecology/study-guides/build/

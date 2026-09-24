@@ -1,0 +1,11 @@
+% How the grade is weighted (Biology Class Basics, slide 6).
+\begin{guidefig}{How your grade is weighted (Biology Class Basics, slide 6). Formative work counts 0\%, but checkups test it.}
+\begin{tikzpicture}[x=0.13cm]
+  \foreach \s/\w/\col/\t in {0/15/tipc/Checkups\\15\%,15/20/vocabc/Quality\\assignments 20\%,35/45/watchc/Quizzes and exams\\45\%,80/20/linkc/Final exam\\20\%} {
+    \fill[\col!75] (\s,0) rectangle ++(\w,1.1);
+    \node[font=\scriptsize\sffamily\bfseries,text=white,align=center] at (\s+\w/2,0.55) {\t};
+  }
+  \draw[white,line width=1.2pt] (15,0) -- ++(0,1.1) (35,0) -- ++(0,1.1) (80,0) -- ++(0,1.1);
+  \foreach \x in {0,25,50,75,100} \node[font=\scriptsize\sffamily,text=black!55,below] at (\x,0) {\x\%};
+\end{tikzpicture}
+\end{guidefig}

@@ -1,0 +1,327 @@
+# Annotated textbook pages for learning target 1A (Miller & Levine Biology, 2019).
+# `find` / `to` must match the words printed on the page; the build highlights everything between them.
+# kinds: key (key idea), vocab, tip (make it make sense), watch (common mistake), link (connection to class)
+
+how_to_use: |
+  You don't need the textbook to use this guide. Every textbook page that matters for 1A is copied into **Part 1**, in order,
+  with the important sentences highlighted. Each highlight has a numbered badge that matches a note in the column beside the page.
+  The notes explain hard words, answer the textbook's questions, and connect the page to what your teacher asks about in class.
+
+  1. **Read Part 1 first.** Read each textbook page, then its notes. Don't skip the notes on the reading checks and review questions, because they give you model answers.
+  2. **Then read Parts 2–5** (after the textbook pages): the other sources the textbook leaves out, a one-page summary, the vocabulary explained in detail, and full answers to the teacher's study questions.
+  3. **Test yourself.** Cover the answers in Part 5 and try each study question out loud before you check.
+
+  Notes are color-coded:
+
+pages:
+  - page: 8
+    lesson: "Lesson 1.1 What Is Science?"
+    intro: "This lesson answers \"what is science?\" Most of 1A comes from here: observation, inference, and data. The list of words at the top left is the lesson's vocabulary."
+    notes:
+      - find: "observation inference hypothesis"
+        to: "theory"
+        kind: vocab
+        label: "Lesson vocabulary"
+        text: "For 1A, focus on **observation**, **inference**, and **data**. Hypothesis, controlled experiment, variables, and control group come back in 1B."
+      - find: "scientific knowledge is always changing"
+        kind: key
+        text: "Scientific knowledge changes when new evidence appears. That is why science is a skill you practice, not a list of facts to memorize."
+      - find: "Scientists either understand"
+        to: "reject that explanation."
+        kind: watch
+        text: "Scientists don't \"believe\" in ideas. They **accept or reject** explanations based on evidence. Avoid writing \"scientists believe…\" in answers."
+      - find: "The term science is usually defined"
+        to: "through this process."
+        kind: vocab
+        label: "science"
+        text: "Science has two meanings: a **process** (the way we find things out) and the **body of knowledge** that process produces."
+      - find: "Most importantly, science is a process"
+        to: "reject those explanations."
+        kind: key
+        text: "The process in four steps: **observe and ask questions → make a testable explanation → gather and analyze data → support or reject the explanation.** Worth memorizing."
+
+  - page: 9
+    lesson: "Lesson 1.1 What Is Science?"
+    intro: "How science is different from other ways of explaining the world, and what science is trying to do."
+    notes:
+      - find: "First, science deals only with the natural world."
+        to: "not belief."
+        kind: key
+        text: "Three features of science: (1) it studies only the **natural** world; (2) it collects information in an **orderly** way and looks for patterns and cause and effect; (3) its explanations come from **evidence**, not belief."
+      - find: "universal natural laws"
+        kind: tip
+        text: "The same natural laws apply to something huge (a hurricane) and something tiny (a cell). That's why one experiment can teach us about many situations."
+      - find: "One goal of science is to provide"
+        to: "about natural events."
+        kind: key
+        label: "Goals of science"
+        text: "Science aims to (1) give **natural, testable explanations**, (2) understand **patterns** in nature, and (3) make useful **predictions**."
+      - find: "How do chimpanzees interact"
+        kind: link
+        text: "Each question can be answered with data. \"Ideal temperature for basil\" gives **quantitative** data (numbers). \"How chimps interact\" gives mostly **qualitative** data (descriptions of behavior)."
+
+  - page: 10
+    lesson: "Lesson 1.1 What Is Science?"
+    intro: "Science is uncertain and always improving. The \"scientific method\" is really a flexible way of thinking that you already use."
+    notes:
+      - find: "science rarely"
+        to: "exciting!"
+        kind: key
+        text: "Science doesn't **prove** things. It finds the best explanation the evidence supports. This connects to study question 4: science relies on induction, which is never 100% certain."
+      - find: "And please don't believe them"
+        to: "those ideas."
+        kind: tip
+        text: "The book tells you to be **skeptical** of the book! Ask *how* scientists know something, not just *what* they know."
+      - find: "Suppose your family"
+        to: "call a mechanic!"
+        kind: tip
+        label: "Everyday science"
+        text: "Each guess (\"dead battery?\", \"out of gas?\") is a **hypothesis**, and each check (turn the key, look at the gauge) is a **test**. When a test fails, you reject that idea and try the next one."
+      - find: "There isn't a single, cut-and-dried"
+        kind: watch
+        text: "There is **no single fixed \"scientific method\"** with the same steps every time. Scientists follow a general style called *scientific methodology*."
+      - find: "Scientific methodology involves"
+        to: "drawing conclusions."
+        kind: key
+        text: "Five parts: **observe and ask questions → form hypotheses → do controlled experiments → collect and analyze data → draw conclusions.** Figure 1-2 on the next page walks through all five."
+      - find: "Construct an Explanation How is scientific"
+        kind: tip
+        label: "Reading check: answer"
+        text: "Scientific knowledge is based on **evidence** from observation and experiment, it must be **testable**, and it is always open to **revision** when new evidence appears. Other kinds of knowledge (opinion, belief, tradition) don't have to meet those rules."
+
+  - page: 11
+    lesson: "Lesson 1.1 What Is Science?"
+    intro: "Figure 1-2 follows one real study from start to finish. Match each numbered step to the 1A vocabulary."
+    notes:
+      - find: "OBSERVING AND ASKING QUESTIONS"
+        kind: vocab
+        label: "Step 1: observation"
+        text: "The **observation** is that grass is taller in some places. It is something you can see and describe. The question it leads to: *why?*"
+      - find: "INFERRING AND HYPOTHESIZING"
+        kind: vocab
+        label: "Step 2: inference"
+        text: "\"Something limits growth\" is an **inference**, an interpretation of the observation using background knowledge. Narrowing it to one testable cause (nitrogen) makes it a **hypothesis**."
+      - find: "DESIGNING CONTROLLED EXPERIMENTS"
+        kind: link
+        text: "The plots are alike in everything except nitrogen. Only one thing differs between groups: that's a **controlled experiment** (1B vocabulary)."
+      - find: "COLLECTING DATA"
+        kind: vocab
+        label: "Step 4: data"
+        text: "Growth rates, plant sizes, and leaf chemistry are all **quantitative** data (measured numbers). A note like \"the grass was lying flat\" would be qualitative."
+      - find: "ANALYZING CONCLUSIONS"
+        kind: watch
+        text: "Look at the wording: the hypothesis was **supported**, not *proved*. The graph shows the +N plots (red) growing taller than the control (blue) over time."
+
+  - page: 12
+    lesson: "Lesson 1.1 What Is Science?"
+    intro: "The most important page for 1A. It defines observation, inference, and the two kinds of data."
+    notes:
+      - find: "Scientific investigations begin with observation"
+        to: "careful, orderly way."
+        kind: vocab
+        label: "observation"
+        text: "An **observation** is noticing and **describing** carefully, using your senses or instruments. It says *what is there*, not what it means."
+      - find: "The right kind of observation leads"
+        to: "answered) before."
+        kind: tip
+        text: "Good observations lead to good **questions**. Sherlock Holmes is famous because he notices details other people miss."
+      - find: "An inference is a logical interpretation"
+        to: "already know."
+        kind: vocab
+        label: "inference"
+        text: "An **inference** goes *beyond* the observation to explain it, using what you already know. It can be wrong even when the observation is right."
+      - find: "Inference, combined with a creative imagination"
+        to: "by experimentation."
+        kind: key
+        text: "The chain: **observation → inference → hypothesis → test.** A hypothesis is an inference stated so it can be tested."
+      - find: "Quantitative data are numbers"
+        to: "counting or measuring."
+        kind: vocab
+        label: "quantitative data"
+        text: "**Numbers** from counting or measuring. *Quanti*tative = *quanti*ty. Examples: 47 plants, 30 cm tall, 22 °C."
+      - find: "Qualitative data are descriptive"
+        to: "cannot usually be measured."
+        kind: vocab
+        label: "qualitative data"
+        text: "**Descriptions** instead of numbers. *Quali*tative = *quali*ty (what kind). Examples: upright or sideways grass, yellow leaves, a plot disturbed by clam diggers."
+
+  - page: 13
+    lesson: "Lesson 1.1 What Is Science?"
+    intro: "How scientists make their data trustworthy, and what to do when an experiment isn't possible."
+    notes:
+      - find: "Statistical analysis helps"
+        to: "from controls."
+        kind: tip
+        text: "**Statistics** check whether a difference is real or just chance. If the nitrogen plots were only 1 cm taller, that might be luck."
+      - find: "The larger the sample size"
+        to: "experimentals and controls."
+        kind: key
+        text: "**More data make conclusions more reliable.** That's the idea behind the Geotastic game: more advances (more observations) should give better location guesses (better inferences)."
+      - find: "Data analysis may lead to conclusions that support or refute"
+        to: "experimental design."
+        kind: key
+        text: "Conclusions **support or refute** (reject) a hypothesis. Often the result is \"partly right,\" which leads to a revised hypothesis and a better experiment. Science improves the same way you do: test, get feedback, revise."
+      - find: "Not all hypotheses can be tested by experiments."
+        kind: tip
+        text: "Some questions (like animal behavior in the wild) are answered by careful **field observations** instead of experiments. Jane Goodall's chimpanzee research is a famous example."
+      - find: "Describe What is the difference between"
+        kind: tip
+        label: "Reading check: answer"
+        text: "**Quantitative** data are numbers from counting or measuring (height = 30 cm). **Qualitative** data are descriptions of characteristics that usually can't be measured (the grass is leaning sideways)."
+      - find: "Analyze Graphs According to the circle graph"
+        kind: tip
+        label: "Analyzing Data: answers"
+        text: "1. **Fruits** (49% of the diet; leaves are 38%). 2. With less fruit, siamangs would have less of their main food. They might eat more leaves, lose weight, or have fewer young. A hypothesis: *if fruit decreases, then siamang populations will decline.* The graph is **quantitative** data."
+
+  - page: 14
+    lesson: "Lesson 1.1 What Is Science?"
+    intro: "What a scientific theory is, plus the lesson review. The notes give model answers to every review question."
+    notes:
+      - find: "When most people say"
+        kind: watch
+        text: "In everyday speech, \"theory\" means a guess. In science it means the **opposite**: a well-tested, highly reliable explanation."
+      - find: "In science, the word theory applies to"
+        to: "accurate predictions."
+        kind: vocab
+        label: "theory"
+        text: "A **theory** is a tested, highly reliable explanation that ties together many observations and well-supported hypotheses, and that makes accurate predictions. Examples: cell theory, evolution."
+      - find: "But remember that no theory is absolute truth."
+        kind: key
+        text: "Even a strong theory can be **revised** if new evidence appears. Again: science supports, it doesn't prove."
+      - find: "In your own words, define the term science."
+        kind: tip
+        label: "Review 1–3: answers"
+        text: "**1.** Science is an organized way of using evidence to explain and predict events in the natural world, plus the knowledge that process builds. **2.** A hypothesis gives the experiment its purpose: it says what to change (independent variable) and what result to expect. **3.** A hypothesis is a single testable explanation. A theory is a well-tested explanation that unifies many observations and hypotheses."
+      - find: "Form a Hypothesis You observe mold"
+        kind: tip
+        label: "Review 4–5: answers"
+        text: "**4.** Example: *the moldy side got more moisture* (or less light, or touched a mold source). **5.** Hypothesis: warmer water increases goldfish activity. Independent variable: water temperature (e.g., 15, 20, 25 °C). Dependent variable: gill beats per minute. Control group: fish at normal tank temperature. Keep fish size, tank size, and food the same, and use several fish per group."
+
+  - page: 15
+    lesson: "Lesson 1.2 Science in Context"
+    intro: "Lesson 1.2 shows science as a messy loop, not a straight line, and as something done by a community."
+    notes:
+      - find: "The testing of ideas is the heart"
+        to: "process of science."
+        kind: key
+        text: "Scientists question, observe, look for evidence, **share ideas**, and analyze data. All of these are part of science, not just experiments."
+      - find: "Notice that the parts of the process do not"
+        to: "proceed."
+        kind: key
+        text: "Real science **loops back** on itself. Results send you back to new questions. This is the same loop as deliberate practice in 1A: try, get feedback, fix, try again."
+      - find: "bias"
+        kind: vocab
+        label: "bias"
+        text: "A **bias** is \"a personal, rather than scientific, point of view for, or against, something\" (p. 20). Controlled experiments and peer review help keep bias out of results."
+
+  - page: 16
+    lesson: "Lesson 1.2 Science in Context"
+    intro: "Where scientific ideas come from, and the habits of mind that good scientists (and good students) use."
+    notes:
+      - find: "Ideas in science can arise"
+        kind: link
+        text: "Scientists start by observing, asking questions, **talking with colleagues**, and reading earlier work. That is **collaboration** (a 1A academic word)."
+      - find: "Curiosity, skepticism, open-mindedness, and creativity"
+        to: "new problems."
+        kind: key
+        text: "The four **scientific attitudes**. Know all four, and be ready to give an example of each."
+      - find: "Skepticism Scientists and engineers should be skeptics"
+        to: "without evidence."
+        kind: vocab
+        label: "skepticism"
+        text: "Being **skeptical** means questioning ideas and asking for evidence before accepting them. It's not the same as refusing to believe anything."
+      - find: "Open-Mindedness Scientists and engineers should be"
+        kind: vocab
+        label: "open-mindedness"
+        text: "Being **open-minded** means being willing to accept evidence and ideas that disagree with what you expected. Pairs well with skepticism: question everything, but change your mind when the evidence says so."
+
+  - page: 17
+    lesson: "Lesson 1.2 Science in Context"
+    intro: "How scientists work together and check each other's work."
+    notes:
+      - find: "Scientists often collaborate in groups"
+        to: "scientific community."
+        kind: vocab
+        label: "collaboration"
+        text: "Scientists **collaborate**: they work in teams and share with other teams. Results only count once they are shared with the scientific community."
+      - find: "Communication is an important part of science."
+        kind: vocab
+        label: "feedback"
+        text: "Figure 1-6: scientists give each other **feedback** through peer review, discussion, and replication. Your formative assessments do the same job for you."
+      - find: "Scientists also share their work with the general public"
+        kind: tip
+        text: "Scientists also share informally, through news articles, TV, and blogs, especially when results could help society."
+      - find: "Describe Describe a"
+        kind: tip
+        label: "Reading check: answer"
+        text: "Example: \"Cracking your knuckles causes arthritis.\" A skeptic asks what evidence supports it. (Studies comparing knuckle-crackers with non-crackers have not found more arthritis.)"
+
+  - page: 18
+    lesson: "Lesson 1.2 Science in Context"
+    intro: "Peer review: how the scientific community checks new research before accepting it."
+    notes:
+      - find: "Peer Review Scientists share findings"
+        to: "called peer review."
+        kind: vocab
+        label: "peer review"
+        text: "**Peer review:** other experts in the same field check a paper for mistakes, bias, and fraud before it is published. It's feedback and assessment for scientists."
+      - find: "Peer review does not guarantee"
+        to: "scientific community."
+        kind: watch
+        text: "Peer review doesn't **guarantee** a paper is right. It shows the work meets the community's standards."
+      - find: "These logical and important"
+        kind: key
+        text: "Every answer raises **new questions** (does nitrogen limit mangroves too?). Science keeps going."
+      - find: "Why is it necessary for other scientists to evaluate"
+        kind: tip
+        label: "Reading check: answer"
+        text: "Other experts can catch mistakes, bias, or fraud the authors missed, and can **replicate** the work to see if they get the same result. That makes the findings more trustworthy."
+      - find: "Replicating"
+        kind: link
+        text: "Quick Lab: if your directions are unclear, others can't **replicate** your work. This is the 1A academic skill of writing clearly and concisely."
+
+# Figures cropped from the books for Parts 2–5 (placed in 1A.md with <!-- bookfig: id -->).
+# crop: [x0, y0, x1, y1] in points from the page's top-left corner.
+figures:
+  c-process:
+    book: C
+    page: 18
+    label: "Figure 1.23"
+    crop: [30, 262, 612, 762]
+    width: 0.78
+    caption: "The process of science is a loop, not a straight line. Testing ideas (center) connects to exploring (top), community feedback (right), and benefits to society (left). Deliberate practice works the same way."
+  c-goodall:
+    book: C
+    page: 16
+    label: "Figure 1.21"
+    crop: [312, 586, 588, 762]
+    width: 0.5
+    caption: "Qualitative data: Jane Goodall recorded chimpanzee behavior as written descriptions and sketches."
+  c-desklamp:
+    book: C
+    page: 17
+    label: "Figure 1.22"
+    crop: [345, 106, 602, 346]
+    width: 0.55
+    caption: "Deduction in action. Each hypothesis leads to an if … then prediction (\"if the bulb is burnt out, replacing it will fix the lamp\"), which a test supports or rejects."
+  c-mice-data:
+    book: C
+    page: 20
+    label: "Figure 1.25"
+    crop: [30, 48, 406, 602]
+    width: 0.55
+    caption: "Quantitative data: the percentage of mouse models attacked by predators, shown as a bar graph. Camouflaged models were attacked much less."
+  c-mice:
+    book: C
+    page: 19
+    label: "Figure 1.24"
+    crop: [62, 556, 614, 766]
+    width: 0.9
+    caption: "Observation: beach mice are light and inland mice are dark, each matching its surroundings. Inference: the coloring camouflages them from predators. That inference became a hypothesis, tested in Figure 1.25."
+  c-community:
+    book: C
+    page: 18
+    label: "Figure 1.23 (detail)"
+    crop: [366, 545, 612, 762]
+    width: 0.42
+    caption: "Community analysis and feedback: scientists collaborate through peer review, replication, publication, and discussion."
