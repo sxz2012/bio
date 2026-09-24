@@ -25,11 +25,9 @@
 \newenvironment{fieldnotes}{\begin{quote}\begin{enumerate}[label=(\arabic*),leftmargin=2em,itemsep=1pt,topsep=0pt]}{\end{enumerate}\end{quote}}
 
 % ---- figures
-% \examfig{name}: a TikZ/pgfplots figure in ../figures/name.tex
-\newcommand{\examfig}[1]{\input{../figures/#1}}
-% \bookfigure{id}: a figure cropped from a book; build.py writes ../build/figs/<id>.tex from exams/<T>-exam.yaml
-\newcommand{\bookfigure}[1]{\input{../build/figs/#1.tex}}
-\newcommand{\graphgrid}{\examfig{exam-blank-grid}}
+% figures: \drawfig{name} and \bookcrop{…} (preamble.tex); \examfig is an alias of \drawfig
+\newcommand{\examfig}[1]{\drawfig{#1}}
+\newcommand{\graphgrid}{\drawfig{exam-blank-grid}}
 
 % ---- answer key
 \newcommand{\answerkey}{\clearpage\section{Answer key}}

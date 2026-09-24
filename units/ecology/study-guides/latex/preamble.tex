@@ -1,4 +1,6 @@
-% Shared preamble for the learning-target study guides (built by ../build.py).
+% Shared preamble for the study guides and mock exams (built by ../build.py).
+% \sgroot is the path from the document's folder to study-guides/ (empty for guides, ../ for exams).
+\providecommand{\sgroot}{}
 \usepackage[margin=0.8in,headheight=15pt]{geometry}
 \usepackage{fontspec}
 \setmainfont{texgyrepagella}[Extension=.otf,UprightFont=*-regular,BoldFont=*-bold,ItalicFont=*-italic,BoldItalicFont=*-bolditalic]
@@ -8,7 +10,7 @@
 \usepackage{pgfplots}\pgfplotsset{compat=1.18}
 \usetikzlibrary{calc,arrows.meta,positioning}
 \usepackage[most]{tcolorbox}
-\usepackage{fancyhdr,titlesec,needspace}
+\usepackage{fancyhdr,titlesec,needspace,etoolbox,environ}
 \usepackage{hyperref}
 
 \definecolor{forest}{HTML}{24594B}
@@ -163,3 +165,12 @@
   garr/.style={-{Stealth[length=2.4mm]},line width=1pt,draw=#1},
   glab/.style={font=\scriptsize\sffamily,fill=white,inner sep=1.5pt,align=center},
 }
+
+% ------------------------------------------------------------------ figures shared by guides and exams
+% \drawfig{name}: a TikZ/pgfplots figure in figures/name.tex
+\newcommand{\drawfig}[1]{\input{\sgroot figures/#1}}
+% \bookcrop[width]{id}{book}{page}{x0 y0 x1 y1}{label}{caption}: a figure cropped from a book page.
+% book: C = Campbell Biology, ML = Miller & Levine Biology; page = printed page number;
+% crop box in points from the page's top-left corner. build.py makes build/figs/<id>.png from these arguments.
+\newcommand{\bookname}[1]{\ifstrequal{#1}{C}{Campbell Biology}{Miller \& Levine Biology}}
+\newcommand{\bookcrop}[7][0.7]{\bookfig{\sgroot build/figs/#2.png}{#1}{#7}{\bookname{#3}, #6, p.\,#4}}

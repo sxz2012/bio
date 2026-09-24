@@ -1,6 +1,7 @@
 % 1A mock exam (AP-style). Build: python3 units/ecology/study-guides/build.py 1A-exam
-% Macros: latex/exam.sty. Book figures (\bookfigure) are defined in exams/1A-exam.yaml.
+% Macros: latex/exam.sty. Figures: \drawfig/\examfig (figures/) and \bookcrop (cropped from a book by build.py).
 \documentclass[11pt,letterpaper]{article}
+\newcommand{\sgroot}{../}
 \input{../latex/preamble.tex}
 \usepackage{../latex/exam}
 \hypersetup{pdftitle={1A Mock Exam},pdfauthor={Prepared for Shawn}}
@@ -74,7 +75,8 @@ Which of the following is a testable scientific hypothesis based on the notes?
 
 Researchers wanted to know whether fur color that matches the surroundings protects mice from predators. They placed light-colored and dark-colored model mice in two habitats: a beach with light sand and an inland area with dark soil. The next morning they recorded the percentage of models in each group that had been attacked by predators.
 
-\bookfigure{c-mice-results}
+\bookcrop[0.68]{c-mice-results}{C}{20}{58 290 380 482}{Figure 1.25}
+  {Percentage of light and dark mouse models attacked by predators in a beach habitat and an inland habitat.}
 
 \begin{mcq}{4}
 Which is the independent variable in this experiment?

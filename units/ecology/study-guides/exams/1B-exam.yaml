@@ -1,9 +1,0 @@
-# Book figures used in the 1B mock exam (placed with <!-- bookfig: id -->).
-figures:
-  c-glucose-exam:
-    book: C
-    page: 928
-    label: "Figure 41.23"
-    crop: [190, 400, 614, 754]
-    width: 0.62
-    caption: "Regulation of blood glucose by the pancreas, liver, and body cells."

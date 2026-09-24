@@ -1,6 +1,7 @@
 % 1B mock exam (AP-style). Build: python3 units/ecology/study-guides/build.py 1B-exam
-% Macros: latex/exam.sty. Book figures (\bookfigure) are defined in exams/1B-exam.yaml.
+% Macros: latex/exam.sty. Figures: \drawfig/\examfig (figures/) and \bookcrop (cropped from a book by build.py).
 \documentclass[11pt,letterpaper]{article}
+\newcommand{\sgroot}{../}
 \input{../latex/preamble.tex}
 \usepackage{../latex/exam}
 \hypersetup{pdftitle={1B Mock Exam},pdfauthor={Prepared for Shawn}}
@@ -258,7 +259,8 @@ A student finds an unknown object in a pond sample. Under the microscope it has 
 
 Refer to the diagram of blood glucose regulation.
 
-\bookfigure{c-glucose-exam}
+\bookcrop[0.62]{c-glucose-exam}{C}{928}{190 400 614 754}{Figure 41.23}
+  {Regulation of blood glucose by the pancreas, liver, and body cells.}
 
 \begin{parts}
   \item \textbf{Identify} the stimulus that causes the pancreas to release insulin.
