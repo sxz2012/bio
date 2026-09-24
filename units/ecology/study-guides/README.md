@@ -9,7 +9,20 @@ One study guide per learning target in the teacher's unit guide. Each guide can 
 
 ## Mock exams
 
-AP-style practice exams, one per target: `exams/<target>-exam.md` (plus `exams/<target>-exam.yaml` for any book figures). Each has 16 data-based multiple-choice questions, four free-response questions (one long, three short), and an answer key after a page break: an answer table, an explanation of every choice, and a point-by-point scoring guide with model answers. Build with `build.py 1A-exam 1B-exam`; the PDFs go to `output/private/<target>-mock-exam.pdf`. `<!-- pagebreak -->` starts a new page.
+AP-style practice exams, one per target, written directly in LaTeX: `exams/<target>-exam.tex`. Each has 16 data-based multiple-choice questions, four free-response questions (one long, three short), and an answer key on a new page: an answer table, an explanation of every choice, and a point-by-point scoring guide with model answers.
+
+The macros are in `latex/exam.sty`:
+
+| Macro | Use |
+|---|---|
+| `\examtitle{1A}{Title}` | title block |
+| `\examsection{…}`, `\questiongroup{…}`, `\frq{…}` | section, "Questions 4–7 refer to …", free-response heading |
+| `\begin{mcq}{5} stem \begin{choices}\item …\end{choices}\end{mcq}` | multiple-choice question; choices are lettered (A)–(D) automatically |
+| `\begin{parts}\item …\end{parts}` | free-response parts (a), (b), … |
+| `\examfig{name}`, `\graphgrid`, `\bookfigure{id}` | a figure from `figures/`, a blank graphing grid, a figure cropped from a book (defined in `exams/<target>-exam.yaml`) |
+| `\answerkey`, `\answer{5}{B}{short}`, `\skill{…}`, `\begin{whynot}\wrong{(A)}{reason}\end{whynot}`, `\modelanswer` | answer key |
+
+Build with `python3 units/ecology/study-guides/build.py 1A-exam 1B-exam`; the PDFs go to `output/private/<target>-mock-exam.pdf`.
 
 ## Files
 

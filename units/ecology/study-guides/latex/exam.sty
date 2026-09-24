@@ -1,0 +1,44 @@
+% Macros for the mock exams (exams/<T>-exam.tex). Loaded after preamble.tex.
+\ProvidesPackage{exam}
+\RequirePackage{tabularx}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+% ---- front matter
+\newcommand{\examtitle}[2]{% target, title
+  \thispagestyle{empty}
+  {\sffamily\small\color{forest} ECOLOGY UNIT\quad·\quad LEARNING TARGET #1\quad·\quad AP-STYLE PRACTICE\par}
+  \vspace{4pt}{\raggedright\sffamily\bfseries\huge\color{forest} #2\par}\vspace{8pt}
+  \fancyhead[R]{\small\sffamily ECOLOGY\quad #1 MOCK EXAM}}
+\fancyhead[L]{\small\sffamily SHAWN'S BIOLOGY}
+
+% ---- questions
+\newcommand{\examsection}[1]{\section{#1}}
+\newcommand{\questiongroup}[1]{\par\Needspace{12\baselineskip}\subsection{#1}}
+% \begin{mcq}{number} stem \begin{choices}\item …\end{choices}\end{mcq}
+\newenvironment{mcq}[1]{\par\Needspace{9\baselineskip}\medskip\noindent\textbf{#1.}\ \ignorespaces}{\par}
+\newenvironment{choices}{\begin{enumerate}[label=(\Alph*),leftmargin=2.4em,itemsep=1pt,topsep=4pt]}{\end{enumerate}}
+% free-response question heading and its lettered parts
+\newcommand{\frq}[1]{\par\Needspace{12\baselineskip}\subsection{#1}}
+\newenvironment{parts}{\begin{enumerate}[label=(\alph*),leftmargin=2.2em,itemsep=4pt,topsep=4pt]}{\end{enumerate}}
+\newcommand{\datanote}[1]{\par{\small\itshape #1}\par}
+% field notes, quotations
+\newenvironment{fieldnotes}{\begin{quote}\begin{enumerate}[label=(\arabic*),leftmargin=2em,itemsep=1pt,topsep=0pt]}{\end{enumerate}\end{quote}}
+
+% ---- figures
+% \examfig{name}: a TikZ/pgfplots figure in ../figures/name.tex
+\newcommand{\examfig}[1]{\input{../figures/#1}}
+% \bookfigure{id}: a figure cropped from a book; build.py writes ../build/figs/<id>.tex from exams/<T>-exam.yaml
+\newcommand{\bookfigure}[1]{\input{../build/figs/#1.tex}}
+\newcommand{\graphgrid}{\examfig{exam-blank-grid}}
+
+% ---- answer key
+\newcommand{\answerkey}{\clearpage\section{Answer key}}
+\newcommand{\keyheading}[1]{\par\Needspace{8\baselineskip}\subsection{#1}}
+\newcommand{\scoreheading}[1]{\par\Needspace{8\baselineskip}\subsubsection{#1}}
+% \answer{question}{letter}{short form of the answer}
+\newcommand{\answer}[3]{\par\Needspace{7\baselineskip}\medskip\noindent\textbf{#1.~(#2)}\ifx\relax#3\relax\else\ \textbf{#3}\fi\par}
+\newcommand{\skill}[1]{{\small\itshape\color{forest}Skill: #1}\par}
+% why the other choices are wrong: \begin{whynot}\wrong{(A), (B)}{reason}\end{whynot}
+\newenvironment{whynot}{\begin{itemize}[leftmargin=1.3em,itemsep=1pt,topsep=3pt]}{\end{itemize}}
+\newcommand{\wrong}[2]{\item \textbf{#1:} #2}
+\newcommand{\modelanswer}{\par\smallskip\noindent\textbf{Model answer.}\par}

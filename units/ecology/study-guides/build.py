@@ -298,34 +298,31 @@ def build(target):
 
 
 def build_exam(target):
-    """Mock AP-style exam: exams/<T>-exam.md (+ exams/<T>-exam.yaml for book figures) -> output/private/<T>-mock-exam.pdf."""
-    md = (HERE / "exams" / f"{target}-exam.md").read_text()
+    """Mock AP-style exam. The source is LaTeX: exams/<T>-exam.tex (macros in latex/exam.sty).
+
+    Book figures used with \\bookfigure{id} are defined in exams/<T>-exam.yaml; this step crops them and
+    writes build/figs/<id>.tex. Output: output/private/<T>-mock-exam.pdf.
+    """
     ypath = HERE / "exams" / f"{target}-exam.yaml"
     figs = (yaml.safe_load(ypath.read_text()) or {}).get("figures", {}) if ypath.exists() else {}
-    title = re.search(r"^# (.+)$", md, re.M).group(1)
-    md = re.sub(r"^# .+$", "", md, count=1, flags=re.M)
-    # keep each numbered question's stem and choices on one page
-    md = re.sub(r"^(#{3,4} )", r"`\\Needspace{12\\baselineskip}`{=latex}\n\n\1", md, flags=re.M)
-    md = re.sub(r"^(\*\*\d+\.\*\*)", r"`\\Needspace{9\\baselineskip}`{=latex}\1", md, flags=re.M)
-    doc = (HERE / "latex" / "exam-template.tex").read_text()
-    for k, v in {"TARGET": target, "TITLE": tex_escape(title), "BODY": pandoc(md, figs),
-                 "PREAMBLE": (HERE / "latex" / "preamble.tex").as_posix()}.items():
-        doc = doc.replace(f"<<{k}>>", v)
+    for fid in figs:
+        path, cap, src = book_figure(fid, figs[fid])
+        (BUILD / "figs" / f"{fid}.tex").write_text(
+            f"\\bookfig{{{path}}}{{{figs[fid].get('width', 0.7)}}}{{{cap}}}{{{src}}}\n")
+    src_tex = HERE / "exams" / f"{target}-exam.tex"
     BUILD.mkdir(exist_ok=True)
-    tex = BUILD / f"{target}-mock-exam.tex"
-    tex.write_text(doc)
-    r = subprocess.run(["tectonic", "--keep-logs", "--outdir", str(BUILD), str(tex)], cwd=BUILD, capture_output=True, text=True)
+    r = subprocess.run(["tectonic", "--keep-logs", "--outdir", str(BUILD), src_tex.name],
+                       cwd=src_tex.parent, capture_output=True, text=True)
     if r.returncode:
         print(r.stdout[-4000:], r.stderr[-4000:], file=sys.stderr)
         sys.exit(r.returncode)
     OUT.mkdir(parents=True, exist_ok=True)
-    shutil.copy(BUILD / f"{target}-mock-exam.pdf", OUT / f"{target}-mock-exam.pdf")
-    warn = [l for l in (BUILD / f"{target}-mock-exam.log").read_text(errors="replace").splitlines()
+    shutil.copy(BUILD / f"{target}-exam.pdf", OUT / f"{target}-mock-exam.pdf")
+    warn = [l for l in (BUILD / f"{target}-exam.log").read_text(errors="replace").splitlines()
             if "Missing character" in l or "Overfull" in l]
     print(f"{target} exam -> {OUT / f'{target}-mock-exam.pdf'}")
     for l in warn[:20]:
         print("  warning:", l)
-
 
 if __name__ == "__main__":
     for t in sys.argv[1:] or ["1A"]:
