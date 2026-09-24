@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Build the study guides and mock exams. The sources are LaTeX; this script prepares what LaTeX can't do alone.
 
-Usage:  python3 units/ecology/study-guides/build.py 1A 1B 1A-exam 1B-exam
+Usage:  python3 units/ecology/study-guides/build.py 1A 1B        (each target's guide and exam)
+        python3 units/ecology/study-guides/build.py 1A/guide 1B/exam
 
-  <T>-guide.tex         study guide  -> output/private/<T>-study-guide.pdf
-  exams/<T>-exam.tex    mock exam    -> output/private/<T>-mock-exam.pdf
+  <T>/guide.tex   study guide  -> output/private/<T>-study-guide.pdf
+  <T>/exam.tex    mock exam    -> output/private/<T>-mock-exam.pdf
 
 Before compiling, the script
   - crops every \\bookcrop{id}{book}{page}{x0 y0 x1 y1}… figure from the book PDFs into build/figs/<id>.png, and
@@ -219,34 +220,35 @@ def write_anchors(target, tex):
 # ---------------------------------------------------------------- compile
 
 def compile_tex(src, pdf_name):
-    BUILD.mkdir(exist_ok=True)
-    r = subprocess.run(["tectonic", "--keep-logs", "--outdir", str(BUILD), src.name], cwd=src.parent, capture_output=True, text=True)
+    outdir = BUILD / src.parent.name  # build/<T>/ keeps each target's guide.pdf and exam.pdf apart
+    outdir.mkdir(parents=True, exist_ok=True)
+    r = subprocess.run(["tectonic", "--keep-logs", "--outdir", str(outdir), src.name], cwd=src.parent, capture_output=True, text=True)
     if r.returncode:
         print(r.stdout[-4000:], r.stderr[-4000:], file=sys.stderr)
         sys.exit(r.returncode)
     OUT.mkdir(parents=True, exist_ok=True)
-    shutil.copy(BUILD / src.with_suffix(".pdf").name, OUT / pdf_name)
-    log = (BUILD / src.with_suffix(".log").name).read_text(errors="replace").splitlines()
+    shutil.copy(outdir / src.with_suffix(".pdf").name, OUT / pdf_name)
+    log = (outdir / src.with_suffix(".log").name).read_text(errors="replace").splitlines()
     return [l for l in log if "Missing character" in l or "Overfull" in l or "WARNING" in l]
 
 
-def build(target):
-    if target.endswith("-exam"):
-        target = target.removesuffix("-exam")
-        src, pdf, what = HERE / "exams" / f"{target}-exam.tex", f"{target}-mock-exam.pdf", "exam"
-    else:
-        src, pdf, what = HERE / f"{target}-guide.tex", f"{target}-study-guide.pdf", "study guide"
+def build(target, doc):
+    src = HERE / target / f"{doc}.tex"
+    if not src.exists():
+        sys.exit(f"no such file: {src.relative_to(HERE)}")
+    pdf = f"{target}-study-guide.pdf" if doc == "guide" else f"{target}-mock-exam.pdf"
     tex = strip_comments(src.read_text())
     crop_figures(tex)
-    extra = ""
-    if what == "study guide":
-        extra = f", {write_anchors(target, tex)} notes"
+    extra = f", {write_anchors(target, tex)} notes" if doc == "guide" else ""
     warnings = compile_tex(src, pdf)
-    print(f"{target} {what}{extra} -> {OUT / pdf}")
+    print(f"{target} {doc}{extra} -> {OUT / pdf}")
     for l in warnings[:20]:
         print("  warning:", l)
 
-
 if __name__ == "__main__":
-    for t in sys.argv[1:] or ["1A"]:
-        build(t)
+    args = sys.argv[1:] or sorted(p.name for p in HERE.iterdir() if (p / "guide.tex").exists())
+    for a in args:
+        target, _, doc = a.partition("/")
+        for d in [doc] if doc else ["guide", "exam"]:
+            if doc or (HERE / target / f"{d}.tex").exists():
+                build(target, d)

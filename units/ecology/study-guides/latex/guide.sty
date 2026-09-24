@@ -1,4 +1,4 @@
-% Macros for the study guides (<T>-guide.tex). Loaded after preamble.tex.
+% Macros for the study guides (<T>/guide.tex). Loaded after preamble.tex.
 \ProvidesPackage{guide}
 \RequirePackage{tabularx}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
@@ -29,7 +29,7 @@
 % kind: key, vocab, tip, watch, link. label: empty = the kind's default heading.
 % find/to: the words to highlight on the page, exactly as printed (to may be empty; find empty = a
 % page-level note with no highlight). LaTeX ignores find/to: build.py matches them against the scan's
-% OCR text and writes the highlight boxes to build/anchors/<T>.tex, which the document loads.
+% OCR text and writes the highlight boxes to build/anchors/<T>.tex, which the guide loads.
 \def\kc@key{keyc}\def\kc@vocab{vocabc}\def\kc@tip{tipc}\def\kc@watch{watchc}\def\kc@link{linkc}
 \def\kl@key{Key idea}\def\kl@vocab{Vocabulary}\def\kl@tip{Make it make sense}\def\kl@watch{Watch out}\def\kl@link{Connection}
 \newcount\tbk

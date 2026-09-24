@@ -1,10 +1,11 @@
-% Study guide for learning target 1A. Build: python3 units/ecology/study-guides/build.py 1A
-% Macros: latex/preamble.tex (\drawfig, \bookcrop) and latex/guide.sty (\guidetitle, tbpage, \tbnote).
+% Study guide for learning target 1A. Build: python3 units/ecology/study-guides/build.py 1A/guide
+% Macros: latex/preamble.tex (\drawfig: figures/ in this folder, \bookcrop) and latex/guide.sty (\guidetitle, tbpage, \tbnote).
 \documentclass[11pt,letterpaper]{article}
-\input{latex/preamble.tex}
-\usepackage{latex/guide}
+\newcommand{\sgroot}{../}
+\input{../latex/preamble.tex}
+\usepackage{../latex/guide}
 \hypersetup{pdftitle={1A Study Guide},pdfauthor={Prepared for Shawn}}
-\InputIfFileExists{build/anchors/1A.tex}{}{}
+\InputIfFileExists{../build/anchors/1A.tex}{}{}
 
 \begin{document}
 \guidetitle{1A}{1A Study Guide: Academic and Personal Skills}
@@ -242,7 +243,7 @@ Although a hypothesis can never be proved beyond all doubt, testing it in variou
 
 \textbf{The big idea of 1A.} Science is a \emph{skill}, not a list of facts, and skills improve through deliberate practice. Deliberate practice means: try it, get feedback, fix the gap, try again. That is the same loop scientists use, where they observe, explain, test, get feedback from peers, and revise. This first target teaches two sets of skills together:
 
-\drawfig{1A-practice-loop}
+\drawfig{practice-loop}
 
 \begin{enumerate}
   \item \textbf{How science thinks.}
@@ -290,7 +291,7 @@ Although a hypothesis can never be proved beyond all doubt, testing it in variou
   \item \textbf{Common mistake:} highlighting everything. If everything is marked, nothing stands out.
 \end{itemize}
 
-\drawfig{1A-annotation-example}
+\drawfig{annotation-example}
 
 \subsection{formative (formative assessment)}
 \begin{itemize}
@@ -308,7 +309,7 @@ Although a hypothesis can never be proved beyond all doubt, testing it in variou
   \item \textbf{Formative vs. summative:} the same kind of question can appear on both. What differs is the \emph{purpose}: to practice and get feedback (formative) or to measure and grade (summative).
 \end{itemize}
 
-\drawfig{1A-formative-summative}
+\drawfig{formative-summative}
 
 \subsection{quantitative / qualitative (data)}
 \begin{itemize}
@@ -416,7 +417,7 @@ These are general academic words, not just biology words. You'll see them on tes
   \item \textbf{Memory hook:} \textbf{In}duction = going \textbf{in}to a big idea from small pieces (specific $\rightarrow$ general). \textbf{De}duction = going \textbf{down} from the big idea to one case (general $\rightarrow$ specific).
 \end{itemize}
 
-\drawfig{1A-induction-deduction}
+\drawfig{induction-deduction}
 
 \begin{itemize}
   \item \textbf{Quick check} (teacher's slide 5):
@@ -467,7 +468,7 @@ Final exam & end of course & Yes, \textbf{20\%} & — \\
 \bottomrule
 \end{longtable}
 
-\drawfig{1A-grade-weights}
+\drawfig{grade-weights}
 
 \textbf{Homework}
 \begin{itemize}
@@ -497,7 +498,7 @@ You demonstrate understanding using the academic skills: accurate vocabulary, cl
 
 \textbf{Connecting it to 1A:} the system is built for deliberate practice. Use the unit guide to know the target, practice with formative work, use the feedback to fix gaps, then show mastery on the summative. If you score below 80\% on an exam, the retake policy lets you run the loop again.
 
-\drawfig{1A-learn-demonstrate}
+\drawfig{learn-demonstrate}
 
 \subsection{Q3. How are observation and inference related to science?}
 
@@ -521,7 +522,7 @@ You demonstrate understanding using the academic skills: accurate vocabulary, cl
   \item \textbf{More observations test it.} The hypothesis predicts what \emph{should} be observed if it's true. Scientists collect new data through experiments or field observations. The data support or reject the inference.
 \end{enumerate}
 
-\drawfig{1A-obs-inf-chain}
+\drawfig{obs-inf-chain}
 
 \textbf{Worked example: the salt marsh (M\&L Figure 1-2, p. 11)}
 

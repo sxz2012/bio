@@ -1,5 +1,5 @@
 % Shared preamble for the study guides and mock exams (built by ../build.py).
-% \sgroot is the path from the document's folder to study-guides/ (empty for guides, ../ for exams).
+% \sgroot is the path from the document's folder to study-guides/ (../ for <T>/guide.tex and <T>/exam.tex).
 \providecommand{\sgroot}{}
 \usepackage[margin=0.8in,headheight=15pt]{geometry}
 \usepackage{fontspec}
@@ -167,8 +167,8 @@
 }
 
 % ------------------------------------------------------------------ figures shared by guides and exams
-% \drawfig{name}: a TikZ/pgfplots figure in figures/name.tex
-\newcommand{\drawfig}[1]{\input{\sgroot figures/#1}}
+% \drawfig{name}: a TikZ/pgfplots figure in figures/name.tex, next to the document (<T>/figures/)
+\newcommand{\drawfig}[1]{\input{figures/#1}}
 % \bookcrop[width]{id}{book}{page}{x0 y0 x1 y1}{label}{caption}: a figure cropped from a book page.
 % book: C = Campbell Biology, ML = Miller & Levine Biology; page = printed page number;
 % crop box in points from the page's top-left corner. build.py makes build/figs/<id>.png from these arguments.

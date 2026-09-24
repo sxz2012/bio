@@ -1,4 +1,4 @@
-% Macros for the mock exams (exams/<T>-exam.tex). Loaded after preamble.tex.
+% Macros for the mock exams (<T>/exam.tex). Loaded after preamble.tex.
 \ProvidesPackage{exam}
 \RequirePackage{tabularx}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
@@ -25,9 +25,8 @@
 \newenvironment{fieldnotes}{\begin{quote}\begin{enumerate}[label=(\arabic*),leftmargin=2em,itemsep=1pt,topsep=0pt]}{\end{enumerate}\end{quote}}
 
 % ---- figures
-% figures: \drawfig{name} and \bookcrop{…} (preamble.tex); \examfig is an alias of \drawfig
-\newcommand{\examfig}[1]{\drawfig{#1}}
-\newcommand{\graphgrid}{\drawfig{exam-blank-grid}}
+% figures: \drawfig{name} and \bookcrop{…} (preamble.tex); \graphgrid is a blank grid for graphing answers
+\newcommand{\graphgrid}{\input{\sgroot latex/blank-grid}}
 
 % ---- answer key
 \newcommand{\answerkey}{\clearpage\section{Answer key}}

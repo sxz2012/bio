@@ -1,10 +1,11 @@
-% Study guide for learning target 1B. Build: python3 units/ecology/study-guides/build.py 1B
-% Macros: latex/preamble.tex (\drawfig, \bookcrop) and latex/guide.sty (\guidetitle, tbpage, \tbnote).
+% Study guide for learning target 1B. Build: python3 units/ecology/study-guides/build.py 1B/guide
+% Macros: latex/preamble.tex (\drawfig: figures/ in this folder, \bookcrop) and latex/guide.sty (\guidetitle, tbpage, \tbnote).
 \documentclass[11pt,letterpaper]{article}
-\input{latex/preamble.tex}
-\usepackage{latex/guide}
+\newcommand{\sgroot}{../}
+\input{../latex/preamble.tex}
+\usepackage{../latex/guide}
 \hypersetup{pdftitle={1B Study Guide},pdfauthor={Prepared for Shawn}}
-\InputIfFileExists{build/anchors/1B.tex}{}{}
+\InputIfFileExists{../build/anchors/1B.tex}{}{}
 
 \begin{document}
 \guidetitle{1B}{1B Study Guide: What Is Life? Metabolism, Homeostasis, and Feedback}
@@ -289,7 +290,7 @@ Something is considered alive when it shows \emph{all} of these, not just one or
   \item \textbf{Why it matters for 1C:} photosynthesis and cellular respiration are how energy and matter move through ecosystems.
 \end{itemize}
 
-\drawfig{1B-metabolism}
+\drawfig{metabolism}
 
 \subsection{homeostasis}
 \begin{itemize}
@@ -306,7 +307,7 @@ Something is considered alive when it shows \emph{all} of these, not just one or
   \item \textbf{Why it matters:} ``any breakdown of homeostasis may have serious or even fatal consequences'' (M\&L p. 25). Heatstroke, hypothermia, dehydration, and uncontrolled diabetes are all failures of homeostasis.
 \end{itemize}
 
-\drawfig{1B-dynamic-eq}
+\drawfig{dynamic-eq}
 
 \subsection{stable / stability}
 \begin{itemize}
@@ -373,7 +374,7 @@ Something is considered alive when it shows \emph{all} of these, not just one or
 \bookcrop[0.55]{c-40-9}{C}{894}{310 48 588 252}{Figure 40.9}
   {(a) Negative feedback: the response reduces the stimulus. (b) Positive feedback: the response increases the stimulus.}
 
-\drawfig{1B-childbirth}
+\drawfig{childbirth}
 
 \subsection{experimental control}
 \begin{itemize}
@@ -383,7 +384,7 @@ Something is considered alive when it shows \emph{all} of these, not just one or
   \item \textbf{Don't confuse:} a \emph{control group} (the comparison group) with \emph{controlled variables} (factors kept the same in both groups). Both are part of experimental control.
 \end{itemize}
 
-\drawfig{1B-control-exp}
+\drawfig{control-exp}
 
 % ================================================================ Part 4. Academic vocabulary
 \section{Part 4. Academic vocabulary}
@@ -423,7 +424,7 @@ Something is considered alive when it shows \emph{all} of these, not just one or
   \item \textbf{Static vs. dynamic equilibrium:} a book resting on a table is static equilibrium (nothing moving). Your body temperature is dynamic equilibrium (constant heating and cooling that balance out).
 \end{itemize}
 
-\drawfig{1B-static-dynamic}
+\drawfig{static-dynamic}
 
 \subsection{mechanism}
 \begin{itemize}
@@ -461,7 +462,7 @@ Something is considered alive when it shows \emph{all} of these, not just one or
   \item \textbf{Everyday use:} practice reinforces learning (a 1A idea).
 \end{itemize}
 
-\drawfig{1B-ice-albedo}
+\drawfig{ice-albedo}
 
 % ================================================================ Part 5. Study questions with answers
 \section{Part 5. Study questions with answers}
@@ -503,7 +504,7 @@ Campbell's version (p. 3) lists seven properties that overlap closely: order (or
   \item \textbf{A mule} is alive even though it's sterile (can't reproduce). It meets every other criterion and is made of cells from parents that did reproduce. The criteria describe living things \emph{in general}, not every individual. (The What Is Life? notes ask: ``Are there any living organisms that cannot reproduce?'')
 \end{itemize}
 
-\drawfig{1B-life-checklist}
+\drawfig{life-checklist}
 
 \textbf{Viruses: the borderline case} (M\&L p. 24; What Is Life? notes)
 
