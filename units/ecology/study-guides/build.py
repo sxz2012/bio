@@ -305,6 +305,7 @@ def build_exam(target):
     title = re.search(r"^# (.+)$", md, re.M).group(1)
     md = re.sub(r"^# .+$", "", md, count=1, flags=re.M)
     # keep each numbered question's stem and choices on one page
+    md = re.sub(r"^(#{3,4} )", r"`\\Needspace{12\\baselineskip}`{=latex}\n\n\1", md, flags=re.M)
     md = re.sub(r"^(\*\*\d+\.\*\*)", r"`\\Needspace{9\\baselineskip}`{=latex}\1", md, flags=re.M)
     doc = (HERE / "latex" / "exam-template.tex").read_text()
     for k, v in {"TARGET": target, "TITLE": tex_escape(title), "BODY": pandoc(md, figs),

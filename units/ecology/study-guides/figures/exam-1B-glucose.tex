@@ -1,0 +1,15 @@
+% Hypothetical glucose tolerance data: two people drink the same glucose solution at time 0.
+\begin{guidefig}{Hypothetical data. Blood glucose after two people each drank the same glucose solution at time 0. The shaded band is the normal fasting range (70–110 mg/100 mL).}
+\begin{tikzpicture}
+\begin{axis}[width=11cm,height=6.2cm,xmin=0,xmax=180,ymin=40,ymax=260,xtick={0,30,60,90,120,150,180},
+  xlabel={Time after drinking glucose (minutes)},ylabel={Blood glucose (mg/100 mL)},
+  axis x line*=bottom,axis y line*=left,legend pos=north east,legend style={font=\scriptsize\sffamily,draw=none},
+  ylabel style={font=\small\sffamily},xlabel style={font=\small\sffamily},tick label style={font=\small\sffamily}]
+  \fill[tipc!12] (axis cs:0,70) rectangle (axis cs:180,110);
+  \addplot[vocabc,line width=1.3pt,mark=*,mark options={fill=vocabc}] coordinates {(0,90) (30,150) (60,125) (90,100) (120,88) (150,84) (180,88)};
+  \addlegendentry{Person X}
+  \addplot[watchc,line width=1.3pt,mark=square*,mark options={fill=watchc}] coordinates {(0,120) (30,200) (60,235) (90,230) (120,215) (150,195) (180,180)};
+  \addlegendentry{Person Y}
+\end{axis}
+\end{tikzpicture}
+\end{guidefig}

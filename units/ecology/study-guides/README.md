@@ -7,6 +7,10 @@ One study guide per learning target in the teacher's unit guide. Each guide can 
 | 1A Academic and personal skills | [1A.md](1A.md) | [pages/1A.yaml](pages/1A.yaml): textbook pp. 8–18 | `output/private/1A-study-guide.pdf` |
 | 1B What is life? Metabolism, homeostasis, feedback | [1B.md](1B.md) | [pages/1B.yaml](pages/1B.yaml): textbook pp. 12, 21–25, 29, 907–908, 932 | `output/private/1B-study-guide.pdf` |
 
+## Mock exams
+
+AP-style practice exams, one per target: `exams/<target>-exam.md` (plus `exams/<target>-exam.yaml` for any book figures). Each has 16 data-based multiple-choice questions, four free-response questions (one long, three short), and an answer key after a page break: an answer table, an explanation of every choice, and a point-by-point scoring guide with model answers. Build with `build.py 1A-exam 1B-exam`; the PDFs go to `output/private/<target>-mock-exam.pdf`. `<!-- pagebreak -->` starts a new page.
+
 ## Files
 
 - `<target>.md`: the guide text. Part 1 quotes the textbooks. In the PDF, the Miller & Levine quotes are replaced by the page images, and the other excerpts (Campbell) are kept.

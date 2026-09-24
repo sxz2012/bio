@@ -1,0 +1,17 @@
+% Hypothetical body temperature and sweat rate during exercise.
+\begin{guidefig}{Hypothetical data. Core body temperature (solid line, left axis) and sweat rate (bars, right axis) of a runner. Exercise runs from minute 10 to minute 40.}
+\begin{tikzpicture}
+\begin{axis}[width=11cm,height=6.2cm,xmin=-2.5,xmax=62.5,ymin=0,ymax=1.6,axis y line*=right,axis x line=none,
+  ylabel={Sweat rate (L/h)},ylabel style={font=\small\sffamily},tick label style={font=\small\sffamily},ybar,bar width=0.35cm]
+  \addplot[fill=vocabc!35,draw=vocabc] coordinates {(0,0.1) (10,0.2) (20,0.9) (30,1.3) (40,1.2) (50,0.5) (60,0.2)};
+\end{axis}
+\begin{axis}[width=11cm,height=6.2cm,xmin=-2.5,xmax=62.5,ymin=36.4,ymax=38.6,axis y line*=left,axis x line*=bottom,
+  xtick={0,10,20,30,40,50,60},xlabel={Time (minutes)},ylabel={Core temperature (°C)},
+  ylabel style={font=\small\sffamily},xlabel style={font=\small\sffamily},tick label style={font=\small\sffamily},
+  yticklabel style={/pgf/number format/fixed,/pgf/number format/precision=1}]
+  \fill[keyc!10] (axis cs:10,36.4) rectangle (axis cs:40,38.6);
+  \node[font=\scriptsize\sffamily,text=keyc!80!black] at (axis cs:25,38.45) {exercise};
+  \addplot[watchc,line width=1.4pt,mark=*,mark options={fill=watchc}] coordinates {(0,37.0) (10,37.1) (20,37.9) (30,38.1) (40,38.1) (50,37.5) (60,37.1)};
+\end{axis}
+\end{tikzpicture}
+\end{guidefig}

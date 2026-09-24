@@ -1,0 +1,12 @@
+% Hypothetical CO2 production by yeast at different temperatures.
+\begin{guidefig}{Hypothetical data. Volume of CO\textsubscript{2} released by yeast in sugar water after 20 minutes. Error bars show $\pm 2$ SE ($n = 5$ flasks per temperature).}
+\begin{tikzpicture}
+\begin{axis}[width=9.5cm,height=5.8cm,ybar,bar width=0.8cm,ymin=0,ymax=16,
+  xlabel={Temperature (°C)},ylabel={CO\textsubscript{2} released (mL)},
+  symbolic x coords={10,20,30,40,50},xtick=data,axis x line*=bottom,axis y line*=left,
+  ylabel style={font=\small\sffamily},xlabel style={font=\small\sffamily},tick label style={font=\small\sffamily},enlarge x limits=0.15]
+  \addplot[fill=keyc!45,draw=keyc!80!black,error bars/.cd,y dir=both,y explicit,error bar style={black,line width=0.8pt}]
+    coordinates {(10,2) +- (0,0.6) (20,6) +- (0,0.9) (30,12) +- (0,1.2) (40,13) +- (0,1.4) (50,1) +- (0,0.5)};
+\end{axis}
+\end{tikzpicture}
+\end{guidefig}
